@@ -33,7 +33,7 @@ function GithubDisplay(){
 
     return(
         <div className="w-[391px] border-blue-400 border rounded-lg px-4">
-            <p className="text-center">550+ contributions in the last year</p>
+            <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
     )
@@ -60,8 +60,11 @@ function ProjectsCard(){
                  <a href="https://echostudy.gosagirma.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View EchoStudy</a>
                 </div>
                 <div>
-                 <img src="/movieApp.png" alt="Movie App" className="w-[50%]"/>
-                 <a href="https://movie-app-theta-steel.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Movie App</a>
+                <div className="border border-gray-400 rounded-2xl p-1 m-1">
+                  <p><span className="text-blue-500 font-bold">Movie App:-</span> a movie app built with React</p>
+                  <img src="/movieApp.png" alt="Movie App" className="w-[50%]"/>
+                  <a href="https://movie-app-theta-steel.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Movie App</a>  
+                </div>
                 </div>
 
             </CardContent>
