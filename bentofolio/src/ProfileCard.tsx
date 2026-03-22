@@ -1,9 +1,9 @@
-import {Card,CardHeader,CardContent,CardFooter} from "./components/ui/card";
+import {Card,CardContent,CardFooter, CardHeader} from "./components/ui/card";
 import { Copy } from "lucide-react";
 
-export default function ProfileCard() {
+function IdentityCard(){
     return(
-        <div className="flex flex-col">
+        <div>
         <Card className="max-w-[391px]">
                 <div className="flex flex-row items-center  gap-4 pl-4 ">
                 <img src="/profile.jpg" alt="Profile" className="rounded-sm w-20 h-20  object-cover" />
@@ -15,20 +15,48 @@ export default function ProfileCard() {
                 </div>
             </div>
             <CardContent>
-                <p className="text-muted-foreground text-[#71717A]">
+                <p className=" text-[#71717A]">
                     I offer end to end product web services that encompass
-                    everything from initial research and identification to prototyping
+                    everything from initial research and identification to building, testing, deployment,
                     and final product delivery.
                 </p>
             </CardContent>
-            <CardFooter className="border-t-0 flex items-center justify-center" >
+            <CardFooter className="border-t-0 flex items-center justify-center p-0 " >
                 
                 <div className="text-center flex justify-center items-center bg-[#EEEEF1] w-[343px] py-2 rounded-md text-[#303038]"><Copy size={20}/> <p className="ml-2"> gosagirma441@gmail.com</p></div>
             </CardFooter>
         </Card>
-        <Card className="max-w-[391px] mt-2">
+        </div>
+    )
+}
+function GithubDisplay(){
 
-        </Card>
+    return(
+        <div className="w-[391px] border-blue-400 border rounded-lg px-4">
+            <p className="text-center">550+ contributions in the last year</p>
+           <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
+        </div>
+    )
+}
+
+function ProjectsCard(){
+    return(
+        <div>
+          <Card className="max-w-[391px]">
+            <CardHeader>
+                <p className="bg-[#EEEEF1] text-[#71717A] rounded-lg w-fit px-3">My Work</p>
+                <h1 className="text-lg font-semibold">Selected Projects</h1>
+            </CardHeader>
+          </Card>
+        </div>
+    )
+}
+export default function ProfileCard() {
+    return(
+        <div className="flex flex-col p-2 gap-3">
+            <IdentityCard />
+            <GithubDisplay />
+            <ProjectsCard/>
         </div>
     )
 }
