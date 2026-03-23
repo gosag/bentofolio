@@ -51,7 +51,7 @@ function MySkills(){
 function HireMeForCard(){
   return(
     <div>
-      <Card className="w-[190px]">
+      <Card className="w-[50%]">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1"> <Briefcase size={16} /> Hire me For</p>
         <div className="flex flex-wrap pl-0.5 gap-2">
           <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Full-Stack MERN + TypeScript</span>
@@ -69,7 +69,7 @@ function HireMeForCard(){
 }
 function ExperiencesCard(){
   return(
-    <div className="max-w-[391px] flex justify-evenly gap-4 ">
+    <div className="w-full flex justify-evenly gap-4 ">
       <div className="flex flex-col gap-4">
       <Card>
         < CardHeader>
@@ -101,7 +101,7 @@ function ExperiencesCard(){
 }
 function InfoGrid() {
   return (
-    <div className="flex flex-col gap-3 max-w-[391px] min-h-screen my-2 mx-3">
+    <div className="flex flex-col gap-3 min-w-[337px] min-h-screen">
         <MySkills />
         <HireMeForCard/>
         <ExperiencesCard/>

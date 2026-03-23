@@ -32,7 +32,7 @@ function IdentityCard(){
 function GithubDisplay(){
 
     return(
-        <div className="w-full border-blue-400 border rounded-lg px-4">
+        <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
@@ -74,7 +74,7 @@ function ProjectsCard(){
 }
 export default function ProfileCard() {
     return(
-        <div className="flex flex-col p-2 gap-3 w-[391px]">
+        <div className="flex flex-col gap-3 min-w-[337px]">
             <IdentityCard />
             <GithubDisplay />
             <ProjectsCard/>
