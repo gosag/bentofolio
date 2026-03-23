@@ -30,9 +30,14 @@ function IdentityCard(){
 function GithubDisplay(){
 
     return(
+        <div className="flex flex-col gap-3">
         <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
+        </div>
+        <Card className="w-full border-none border-transparent h-[131px]">
+
+        </Card>
         </div>
     )
 }
@@ -52,14 +57,14 @@ function ProjectsCard(){
                 <h1 className="text-lg font-semibold">Selected Projects</h1>
             </CardHeader>
             <CardContent className="flex gap-2">
-                <div className="border border-gray-400 rounded-2xl p-1">
+                <div className=" border border-gray-400 rounded-2xl p-1">
                  <p><span className="text-blue-500 font-bold">EchoStudy:-</span> an AI-powered learning platform</p>
                  <img src="/EchoStudy.png" alt="EchoStudy" className="max-w-[90%]"/>  
                  <a href="https://echostudy.gosagirma.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit EchoStudy</a>
                 </div>
                 <div>   
                 <div className=" border border-gray-400 rounded-2xl p-1">
-                  <p><span className="text-blue-500 font-bold">Movie App:-</span> a movie app built with React</p>
+                  <p><span className="text-blue-500 font-bold">Movie App:-</span> a movie app built with React & IMDB </p>
                   <img src="/movieApp.png" alt="Movie App" className="max-w-[100%]"/>
                   <a href="https://movie-app-theta-steel.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit Movie App</a>  
                 </div>

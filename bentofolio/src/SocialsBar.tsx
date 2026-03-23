@@ -24,6 +24,7 @@ function SocialBar(){
             <Linkedin size={40} className="bg-[#EEEEF1] p-3 border border-gray-300 rounded-xl"/>
             <Github size={40} className="bg-[#EEEEF1] p-3 border border-gray-300 rounded-xl"/>
             <Send size={40} className="bg-[#EEEEF1] p-3 border border-gray-300 rounded-xl"/>
+            <MessageCircle size={40} className="bg-[#EEEEF1] p-3 border border-gray-300 rounded-xl"/>
             <Briefcase size={40} className="bg-[#EEEEF1] p-3 border border-gray-300 rounded-xl"/>
             <X size={40} className="bg-[#EEEEF1] p-3 border border-gray-300 rounded-xl"/>
         </div>

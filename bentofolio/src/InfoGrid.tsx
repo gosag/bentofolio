@@ -68,7 +68,7 @@ function HireMeForCard(){
 
       <Card>
         < CardHeader>
-        <p className="bg-slate-200 text-sm"> 😊Deployed Apps</p>
+        <p className="bg-slate-200 text-sm"> 🚀Deployed Apps</p>
         </CardHeader>
         <CardContent>
             <h1 className="text-5xl">3+</h1>
@@ -83,7 +83,7 @@ function HireMeForCard(){
       </Card>
        <Card>
         < CardHeader>
-        <p className="bg-slate-200"> 😊Years Expertise</p>
+        <p className="bg-slate-200"> 🕒Years Expertise</p>
         </CardHeader>
         <CardContent>
             <h1 className="text-7xl">2+</h1>
