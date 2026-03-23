@@ -4,7 +4,7 @@ import { Copy } from "lucide-react";
 function IdentityCard(){
     return(
         <div>
-        <Card className="max-w-[391px]">
+        <Card className="max-full">
                 <div className="flex flex-row items-center  gap-4 pl-4 ">
                 <img src="/profile.jpg" alt="Profile" className="rounded-sm w-20 h-20  object-cover" />
                 <div>
@@ -32,7 +32,7 @@ function IdentityCard(){
 function GithubDisplay(){
 
     return(
-        <div className="w-[391px] border-blue-400 border rounded-lg px-4">
+        <div className="w-full border-blue-400 border rounded-lg px-4">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
@@ -42,7 +42,7 @@ function GithubDisplay(){
 function ProjectsCard(){
     return(
         <div>
-          <Card className="max-w-[391px] border-none border-transparent">
+          <Card className="w-full border-none border-transparent">
             <CardHeader>
                    <p className="bg-[#EEEEF1] text-[#71717A] rounded-lg w-fit px-3 flex justify-center items-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.28192 4.43904C1.37173 4.07496 0.916626 3.89292 0.916626 3.66671C0.916626 3.4405 1.37173 3.25846 2.28192 2.89438L3.56914 2.37949C4.47934 2.01541 4.93443 1.83337 5.49996 1.83337C6.06548 1.83337 6.52058 2.01541 7.43078 2.37949L8.718 2.89438C9.62819 3.25846 10.0833 3.4405 10.0833 3.66671C10.0833 3.89292 9.62819 4.07496 8.718 4.43904L7.43078 4.95392C6.52058 5.318 6.06548 5.50004 5.49996 5.50004C4.93443 5.50004 4.47934 5.318 3.56914 4.95392L2.28192 4.43904Z" fill="#09090B"/>
@@ -62,7 +62,7 @@ function ProjectsCard(){
                 <div>   
                 <div className=" border border-gray-400 rounded-2xl p-1">
                   <p><span className="text-blue-500 font-bold">Movie App:-</span> a movie app built with React</p>
-                  <img src="/movieApp.png" alt="Movie App" className="max-w-50%"/>
+                  <img src="/movieApp.png" alt="Movie App" className="max-w-[100%]"/>
                   <a href="https://movie-app-theta-steel.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit Movie App</a>  
                 </div>
                 </div>
@@ -74,7 +74,7 @@ function ProjectsCard(){
 }
 export default function ProfileCard() {
     return(
-        <div className="flex flex-col p-2 gap-3">
+        <div className="flex flex-col p-2 gap-3 w-[391px]">
             <IdentityCard />
             <GithubDisplay />
             <ProjectsCard/>

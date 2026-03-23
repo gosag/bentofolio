@@ -69,7 +69,7 @@ function HireMeForCard(){
 }
 function ExperiencesCard(){
   return(
-    <div className="max-w-[391px] flex justify-evenly gap-4">
+    <div className="max-w-[391px] flex justify-evenly gap-4 ">
       <div className="flex flex-col gap-4">
       <Card>
         < CardHeader>
@@ -101,7 +101,7 @@ function ExperiencesCard(){
 }
 function InfoGrid() {
   return (
-    <div className="flex flex-col gap-3 max-w-[391px] min-h-screen my-2">
+    <div className="flex flex-col gap-3 max-w-[391px] min-h-screen my-2 mx-3">
         <MySkills />
         <HireMeForCard/>
         <ExperiencesCard/>
