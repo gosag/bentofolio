@@ -8,7 +8,7 @@ function MySkills(){
             animate={{ x: ["0%", "-50%"] }}
             transition={{
               ease: "linear",
-              duration: 15,
+              duration: 25,
               repeat: Infinity,
             }}
             whileHover={{ animationPlayState: "paused" }}
@@ -43,11 +43,42 @@ function MySkills(){
         </Card>
     )
 }
+function HireMeForCard(){
+  return(
+    <div>
+      <Card className="w-[190px]">
+        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md">Hire me For</p>
+        {
+          <div className="flex flex-wrap gap-2">
+    {[
+      "Full-Stack MERN + TypeScript",
+      "Modern UI with Tailwind",
+      "REST API Development",
+      "Authentication",
+      "AI Features (LLMs)",
+      "MongoDB Database Design",
+      "Responsive Web Apps",
+      "Performance Optimization",
+      
+    ].map((item) => (
+      <span
+        key={item}
+        className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+        }
+      </Card>
+    </div>
+  )
+}
 function InfoGrid() {
   return (
-    <div className="grid grid-cols gap-3 max-w-[391px] min-h-screen my-2">
+    <div className="flex flex-col gap-3 max-w-[391px] min-h-screen my-2">
         <MySkills />
-        
+        <HireMeForCard/>
     </div>
   );
 }
