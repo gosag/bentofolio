@@ -4,11 +4,11 @@ import InfoGrid from "./InfoGrid";
 function IdentityCard(){
     return(
         <div>
-        <Card className="max-full">
+        <Card className="max-full bg-zinc-100">
                 <div className="flex flex-row items-center  gap-4 pl-4 ">
                 <img src="/profile.jpg" alt="Profile" className="rounded-sm w-20 h-20  object-cover" />
                 <div>
-                    <p className="text-md w-fit px-2  bg-[#EEEEF1] text-[#71717A] rounded-lg">✌️ Welcome</p>
+                    <p className="text-md w-fit px-2  bg-zinc-300 text-[#71717A] rounded-lg">✌️ Welcome</p>
                     <h1 className="mt-4 text-lg font-semibold">Gosa Girma</h1>
                     <h4>I'm a Full stack Web Developer</h4>
                     
@@ -21,7 +21,7 @@ function IdentityCard(){
             </CardContent>
             <CardFooter className="border-t-0 flex items-center justify-center p-0 " >
                 
-                <div className="text-center flex justify-center items-center bg-[#EEEEF1] w-[343px] py-2 rounded-md text-[#303038]"><Copy size={20}/> <p className="ml-2"> gosagirma441@gmail.com</p></div>
+                <div className="text-center flex justify-center items-center bg-zinc-300 w-[343px] py-2 rounded-md text-[#303038]"><Copy size={20}/> <p className="ml-2"> gosagirma441@gmail.com</p></div>
             </CardFooter>
         </Card>
         </div>
@@ -30,12 +30,12 @@ function IdentityCard(){
 function GithubDisplay(){
 
     return(
-        <div className="flex flex-col gap-3">
-        <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center">
+        <div className="flex flex-col gap-3 ">
+        <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center bg-zinc-100">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
-        <Card className="w-full border-none border-transparent h-[131px] flex justify-center items-center">
+        <Card className="w-full border-none border-transparent h-[131px] flex justify-center items-center bg-zinc-100">
             Available now
         </Card>
         </div>
