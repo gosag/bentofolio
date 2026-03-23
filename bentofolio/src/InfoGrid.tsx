@@ -50,8 +50,8 @@ function MySkills(){
 }
 function HireMeForCard(){
   return(
-    <div>
-      <Card className="w-[50%]">
+    <div className="flex justify-between">
+      <Card className="max-w-[60%]">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1"> <Briefcase size={16} /> Hire me For</p>
         <div className="flex flex-wrap pl-0.5 gap-2">
           <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Full-Stack MERN + TypeScript</span>
@@ -64,16 +64,11 @@ function HireMeForCard(){
           <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Performance Optimization</span>
        </div>
       </Card>
-    </div>
-  )
-}
-function ExperiencesCard(){
-  return(
-    <div className="w-full flex justify-evenly gap-4 ">
-      <div className="flex flex-col gap-4">
+      <div className="max-w-[36%] flex flex-col justify-evenly gap-4 ">
+
       <Card>
         < CardHeader>
-        <p className="bg-slate-200 text-sm"> 😊Happy clients</p>
+        <p className="bg-slate-200 text-sm"> 😊Deployed Apps</p>
         </CardHeader>
         <CardContent>
             <h1 className="text-5xl">3+</h1>
@@ -86,8 +81,7 @@ function ExperiencesCard(){
         </CardHeader> 
             <h1 className="text-5xl">10+</h1>
       </Card>
-      </div>
-      <Card>
+       <Card>
         < CardHeader>
         <p className="bg-slate-200"> 😊Years Expertise</p>
         </CardHeader>
@@ -97,6 +91,7 @@ function ExperiencesCard(){
       </Card>
       
     </div>
+    </div>
   )
 }
 function InfoGrid() {
@@ -104,7 +99,6 @@ function InfoGrid() {
     <div className="flex flex-col gap-3 min-w-[337px] min-h-screen">
         <MySkills />
         <HireMeForCard/>
-        <ExperiencesCard/>
     </div>
   );
 }

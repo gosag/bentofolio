@@ -16,9 +16,7 @@ function IdentityCard(){
             </div>
             <CardContent>
                 <p className=" text-[#71717A]">
-                    I offer end to end product web services that encompass
-                    everything from initial research and identification to building, testing, deployment,
-                    and final product delivery.
+                    I turn ideas into production-ready web applications, managing the entire journey from concept to deployment and iteration.
                 </p>
             </CardContent>
             <CardFooter className="border-t-0 flex items-center justify-center p-0 " >
