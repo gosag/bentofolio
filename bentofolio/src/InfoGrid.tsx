@@ -1,7 +1,10 @@
-import {Card} from "./components/ui/card"
+import { Briefcase } from "lucide-react";
+import {Card, CardContent, CardHeader} from "./components/ui/card"
 import {motion} from "framer-motion"
+
 function MySkills(){
     return(
+      <div>
         <Card className="p-2 h-[120px] overflow-hidden">
           <p className="bg-[#EEEEF1] w-fit px-2 rounded-md">my skills</p>  
            <motion.div
@@ -41,36 +44,58 @@ function MySkills(){
             <img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>
          </motion.div>
         </Card>
+        
+        </div>
     )
 }
 function HireMeForCard(){
   return(
     <div>
       <Card className="w-[190px]">
-        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md">Hire me For</p>
-        {
-          <div className="flex flex-wrap gap-2">
-    {[
-      "Full-Stack MERN + TypeScript",
-      "Modern UI with Tailwind",
-      "REST API Development",
-      "Authentication",
-      "AI Features (LLMs)",
-      "MongoDB Database Design",
-      "Responsive Web Apps",
-      "Performance Optimization",
-      
-    ].map((item) => (
-      <span
-        key={item}
-        className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]"
-      >
-        {item}
-      </span>
-    ))}
-  </div>
-        }
+        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1"> <Briefcase size={16} /> Hire me For</p>
+        <div className="flex flex-wrap pl-0.5 gap-2">
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Full-Stack MERN + TypeScript</span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Modern UI with Tailwind</span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">REST API Development </span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Auth</span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">AI Features (LLMs)</span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">MongoDB Database Design</span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Responsive Web Apps</span>
+          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Performance Optimization</span>
+       </div>
       </Card>
+    </div>
+  )
+}
+function ExperiencesCard(){
+  return(
+    <div className="max-w-[391px] flex justify-evenly gap-4">
+      <div className="flex flex-col gap-4">
+      <Card>
+        < CardHeader>
+        <p className="bg-slate-200 text-sm"> 😊Happy clients</p>
+        </CardHeader>
+        <CardContent>
+            <h1 className="text-5xl">3+</h1>
+        </CardContent>
+      </Card>
+      
+      <Card>
+        < CardHeader>
+        <p className="bg-slate-200"> 😊cool Projects</p>
+        </CardHeader> 
+            <h1 className="text-5xl">10+</h1>
+      </Card>
+      </div>
+      <Card>
+        < CardHeader>
+        <p className="bg-slate-200"> 😊Years Expertise</p>
+        </CardHeader>
+        <CardContent>
+            <h1 className="text-7xl">2+</h1>
+        </CardContent>
+      </Card>
+      
     </div>
   )
 }
@@ -79,6 +104,7 @@ function InfoGrid() {
     <div className="flex flex-col gap-3 max-w-[391px] min-h-screen my-2">
         <MySkills />
         <HireMeForCard/>
+        <ExperiencesCard/>
     </div>
   );
 }
