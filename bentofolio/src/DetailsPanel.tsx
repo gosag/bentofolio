@@ -67,7 +67,7 @@ function CV(){
 }
 function DetailsPanel() {
     return(
-        <div className="min-w-[135px] min-h-screen flex flex-col gap-4">
+        <div className="min-w-[135px] min-h-screen flex flex-col sm:flex-row lg:flex-col gap-4">
             <Experiences /> 
             <CV />  
         </div>

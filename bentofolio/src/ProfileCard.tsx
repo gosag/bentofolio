@@ -1,6 +1,6 @@
 import {Card,CardContent,CardFooter, CardHeader} from "./components/ui/card";
 import { Copy } from "lucide-react";
-
+import InfoGrid from "./InfoGrid";
 function IdentityCard(){
     return(
         <div>
@@ -35,8 +35,8 @@ function GithubDisplay(){
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
-        <Card className="w-full border-none border-transparent h-[131px]">
-
+        <Card className="w-full border-none border-transparent h-[131px] flex justify-center items-center">
+            Available now
         </Card>
         </div>
     )
@@ -44,8 +44,7 @@ function GithubDisplay(){
 
 function ProjectsCard(){
     return(
-        <div>
-          <Card className="w-full border-none border-transparent">
+          <Card className="w-full border-none border-transparent h-[272px] pb-2">
             <CardHeader>
                    <p className="bg-[#EEEEF1] text-[#71717A] rounded-lg w-fit px-3 flex justify-center items-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.28192 4.43904C1.37173 4.07496 0.916626 3.89292 0.916626 3.66671C0.916626 3.4405 1.37173 3.25846 2.28192 2.89438L3.56914 2.37949C4.47934 2.01541 4.93443 1.83337 5.49996 1.83337C6.06548 1.83337 6.52058 2.01541 7.43078 2.37949L8.718 2.89438C9.62819 3.25846 10.0833 3.4405 10.0833 3.66671C10.0833 3.89292 9.62819 4.07496 8.718 4.43904L7.43078 4.95392C6.52058 5.318 6.06548 5.50004 5.49996 5.50004C4.93443 5.50004 4.47934 5.318 3.56914 4.95392L2.28192 4.43904Z" fill="#09090B"/>
@@ -57,30 +56,35 @@ function ProjectsCard(){
                 <h1 className="text-lg font-semibold">Selected Projects</h1>
             </CardHeader>
             <CardContent className="flex gap-2">
-                <div className=" border border-gray-400 rounded-2xl p-1">
+                <div className=" border border-gray-400 rounded-2xl p-1 max-w-[200px]">
                  <p><span className="text-blue-500 font-bold">EchoStudy:-</span> an AI-powered learning platform</p>
                  <img src="/EchoStudy.png" alt="EchoStudy" className="max-w-[90%]"/>  
                  <a href="https://echostudy.gosagirma.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit EchoStudy</a>
                 </div>
                 <div>   
-                <div className=" border border-gray-400 rounded-2xl p-1">
+                <div className=" border border-gray-400 rounded-2xl p-1 max-w-[200px]">
                   <p><span className="text-blue-500 font-bold">Movie App:-</span> a movie app built with React & IMDB </p>
                   <img src="/movieApp.png" alt="Movie App" className="max-w-[100%]"/>
                   <a href="https://movie-app-theta-steel.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit Movie App</a>  
                 </div>
-                </div>
+                </div> 
 
             </CardContent>
           </Card>
-        </div>
+    
     )
 }
 export default function ProfileCard() {
     return(
-        <div className="flex flex-col gap-3 min-w-[337px]">
+        <div className="flex flex-col gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3">
+            <div className="flex flex-col gap-3 min-w-[337px]">
             <IdentityCard />
             <GithubDisplay />
-            <ProjectsCard/>
+            </div>
+            <InfoGrid/>
+        </div>
+        <ProjectsCard/>
         </div>
     )
 }
