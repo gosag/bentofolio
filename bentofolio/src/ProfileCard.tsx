@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 const IdentityCard = () => {
   return (
     <motion.div
-      className="max-full bg-zinc-100 p-6 rounded-3xl shadow-xl"
+      className="max-full bg-zinc-100 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -46,14 +46,11 @@ const IdentityCard = () => {
 function GithubDisplay(){
 
     return(
-        <div className="flex flex-col gap-3 shadow-xl">
-        <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center bg-zinc-100">
+        <div className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300">
+        <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center bg-white">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
-       {/*  <Card className="w-full border-none border-transparent h-[131px] flex justify-center items-center bg-zinc-100">
-            Available now
-        </Card> */}
         </div>
     )
 }

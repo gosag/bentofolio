@@ -75,7 +75,7 @@ const HireMeForCard = () => {
           ].map((skill, index) => (
             <motion.span
               key={index}
-              className="p-2 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[90%] sm:w-auto cursor-pointer flex items-center gap-2"
+              className="p-2 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition min-w-[100%] sm:w-auto cursor-pointer flex items-center gap-2"
               whileHover={{ scale: 1.05, backgroundColor: "#E5E7EB" }}
               whileTap={{ scale: 0.98 }}
             >
