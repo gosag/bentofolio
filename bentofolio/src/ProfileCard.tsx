@@ -1,32 +1,48 @@
 import {Card,CardContent,CardFooter, CardHeader} from "./components/ui/card";
 import { Copy } from "lucide-react";
 import InfoGrid from "./InfoGrid";
-function IdentityCard(){
-    return(
-        <div>
-        <Card className="max-full bg-zinc-100">
-                <div className="flex flex-row items-center  gap-4 pl-4 ">
-                <img src="/profile.jpg" alt="Profile" className="rounded-sm w-20 h-20  object-cover" />
-                <div>
-                    <p className="text-md w-fit px-2  bg-zinc-300 text-[#71717A] rounded-lg">✌️ Welcome</p>
-                    <h1 className="mt-4 text-lg font-semibold">Gosa Girma</h1>
-                    <h4>I'm a Full stack Web Developer</h4>
-                    
-                </div>
-            </div>
-            <CardContent>
-                <p className=" text-[#71717A]">
-                    I turn ideas into production-ready web applications, managing the entire journey from concept to deployment and iteration.
-                </p>
-            </CardContent>
-            <CardFooter className="border-t-0 flex items-center justify-center p-0 " >
-                
-                <div className="text-center flex justify-center items-center bg-zinc-300 w-[343px] py-2 rounded-md text-[#303038]"><Copy size={20}/> <p className="ml-2"> gosagirma441@gmail.com</p></div>
-            </CardFooter>
-        </Card>
+import {motion} from "framer-motion"
+const IdentityCard = () => {
+  return (
+    <motion.div
+      className="max-full bg-zinc-100 p-6 rounded-3xl shadow-xl"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+    >
+      <Card className="bg-white shadow-lg rounded-3xl p-6">
+        <div className="flex flex-row items-center gap-4">
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="rounded-full w-20 h-20 object-cover"
+          />
+          <div>
+            <p className="text-md w-fit px-2 bg-zinc-300 text-[#71717A] rounded-lg">
+              ✌️ Welcome
+            </p>
+            <h1 className="mt-4 text-2xl font-semibold">Gosa Girma</h1>
+            <h4 className="text-lg">I'm a Full stack Web Developer</h4>
+          </div>
         </div>
-    )
-}
+
+        <CardContent>
+          <p className="text-[#71717A]">
+            I turn ideas into production-ready web applications, managing the
+            entire journey from concept to deployment and iteration.
+          </p>
+        </CardContent>
+
+        <CardFooter className="border-t-0 flex items-center justify-center p-0">
+          <div className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer">
+            <Copy size={20} />
+            <p className="ml-2">gosagirma441@gmail.com</p>
+          </div>
+        </CardFooter>
+      </Card>
+    </motion.div>
+  );
+};
 function GithubDisplay(){
 
     return(
