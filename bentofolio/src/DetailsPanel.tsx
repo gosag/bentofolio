@@ -1,14 +1,14 @@
 import { Card} from "./components/ui/card"
 const today= new Date()
 const ExperiencesArray=[
-    "Architected and deployed full-stack web applications using React, Node.js, Express, and MongoDB, with a focus on scalability and maintainability",
-        "Designed and implemented type-safe APIs using TypeScript and schema validation (Zod), reducing runtime errors and improving developer experience",
-        "Built AI-powered features including intelligent summarization, quiz generation, and a Socratic-style tutoring system",
-        "Developed responsive, high-performance UIs using Tailwind CSS, optimizing for accessibility and cross-device compatibility",
-        "Implemented authentication & security best practices (JWT, protected routes, input validation)",
+    "Architected and deployed full-stack web applications using React, Node.js, Express, and MongoDB",
+        "Designed and implemented type-safe APIs using TypeScript and schema validation (Zod)",
+        "Built AI-powered features including intelligent summarization, quiz generation",
+        "Developed responsive, high-performance UIs using Tailwind CSS",
+        "Implemented authentication & security",
         "Managed full product lifecycle: idea → system design → development → deployment → iteration",
         "Optimized application performance through efficient state management, API design, and database queries",
-        "Deployed and maintained applications on modern platforms (e.g., Vercel, Render), ensuring uptime and reliability"
+        "Deployed and maintained applications on modern platforms (e.g., Vercel, Render)"
 ]
 function Experiences(){
     return(
