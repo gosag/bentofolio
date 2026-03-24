@@ -8,18 +8,76 @@ function MySkills(){
         <Card className="p-2 overflow-hidden">
           <p className="bg-[#EEEEF1] w-fit px-2 rounded-md">my skills</p>  
           <motion.div className="flex flex-col gap-3" >
-            <motion.div className="flex gap-3">
-              <div className="flex min-w-28 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+            <motion.div
+            animate={{ x: [0, "-300%"] }}
+            transition={{ repeat: Infinity, duration: 25 }}
+            className="flex gap-3">
+              <div className="flex items-center justify-center gap-1 min-w-28  text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+              <div className="flex items-center min-w-32 text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
+              <div className="flex items-center min-w-fit text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex items-center justify-center gap-1 min-w-32 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+
+              <div className="flex min-w-28 text-lg"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+              <div className="flex min-w-32  text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
+              <div className="flex min-w-fit  text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+
+              <div className="flex min-w-28 text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+              <div className="flex min-w-32  text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
+              <div className="flex min-w-fit text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex min-w-32  text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+
+              <div className="flex min-w-28 text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
               <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
-              <div className="flex min-w-fit bg-zinc-200 border border-zinc-300 text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
-              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+              <div className="flex min-w-fit text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+
+              <div className="flex min-w-28 text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
+              <div className="flex min-w-fit text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+
+              <div className="flex min-w-28 text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
+              <div className="flex min-w-fit text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
             </motion.div>
-            <div className="flex gap-3">
-              <div className="flex min-w-fit pr-1 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
-              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
-              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
-              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
-            </div>
+            <motion.div 
+            initial={{ x: "-250%" }}
+            animate={{ x: 0 }}
+            
+            transition={{ repeat: Infinity, duration: 25 }}
+            className="flex gap-3">
+              <div className="flex min-w-fit pr-1 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
+
+              <div className="flex min-w-fit pr-1 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
+
+              <div className="flex min-w-fit pr-1 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
+
+              <div className="flex min-w-fit pr-1 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
+
+              <div className="flex min-w-fit pr-1 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
+
+              <div className="flex min-w-fit pr-1 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
+            </motion.div>
           </motion.div>
         </Card>
         
@@ -35,7 +93,7 @@ const HireMeForCard = () => {
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       {/* Left Section: Hire Me For Tags */}
-      <Card className="max-w-[60%] p-6 rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100 hover:shadow-2xl transition-shadow duration-300">
+      <Card className="max-w-[60%] py-1 px-6 bt-0  rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100 hover:shadow-2xl transition-shadow duration-300">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1">
           <Briefcase size={16} /> Hire me For
         </p>
@@ -53,7 +111,7 @@ const HireMeForCard = () => {
           ].map((skill, index) => (
             <motion.span
               key={index}
-              className="p-2 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition min-w-[100%] sm:w-auto cursor-pointer flex items-center gap-2"
+              className="p-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition min-w-[100%] sm:w-auto cursor-pointer flex items-center gap-1"
               whileHover={{ scale: 1.05, backgroundColor: "#E5E7EB" }}
               whileTap={{ scale: 0.98 }}
             >
