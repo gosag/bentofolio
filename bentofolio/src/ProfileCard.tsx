@@ -46,21 +46,21 @@ const IdentityCard = () => {
 function GithubDisplay(){
 
     return(
-        <div className="flex flex-col gap-3 ">
+        <div className="flex flex-col gap-3 shadow-xl">
         <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center bg-zinc-100">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
-        <Card className="w-full border-none border-transparent h-[131px] flex justify-center items-center bg-zinc-100">
+       {/*  <Card className="w-full border-none border-transparent h-[131px] flex justify-center items-center bg-zinc-100">
             Available now
-        </Card>
+        </Card> */}
         </div>
     )
 }
 
 function ProjectsCard(){
     return(
-          <Card className="w-full border-none border-transparent h-[272px] pb-2">
+          <Card className="w-full border-none border-transparent h-[272px] pb-2 shadow-xl">
             <CardHeader>
                    <p className="bg-[#EEEEF1] text-[#71717A] rounded-lg w-fit px-3 flex justify-center items-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.28192 4.43904C1.37173 4.07496 0.916626 3.89292 0.916626 3.66671C0.916626 3.4405 1.37173 3.25846 2.28192 2.89438L3.56914 2.37949C4.47934 2.01541 4.93443 1.83337 5.49996 1.83337C6.06548 1.83337 6.52058 2.01541 7.43078 2.37949L8.718 2.89438C9.62819 3.25846 10.0833 3.4405 10.0833 3.66671C10.0833 3.89292 9.62819 4.07496 8.718 4.43904L7.43078 4.95392C6.52058 5.318 6.06548 5.50004 5.49996 5.50004C4.93443 5.50004 4.47934 5.318 3.56914 4.95392L2.28192 4.43904Z" fill="#09090B"/>

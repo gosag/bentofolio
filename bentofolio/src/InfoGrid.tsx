@@ -48,52 +48,79 @@ function MySkills(){
         </div>
     )
 }
-function HireMeForCard(){
-  return(
-    <div className="flex justify-between">
-      <Card className="max-w-[60%]">
-        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1"> <Briefcase size={16} /> Hire me For</p>
+const HireMeForCard = () => {
+  return (
+    <motion.div
+      className="flex flex-row justify-between flex-wrap"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+    >
+      {/* Left Section: Hire Me For Tags */}
+      <Card className="max-w-[60%] p-6 rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100">
+        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1">
+          <Briefcase size={16} /> Hire me For
+        </p>
         <div className="flex flex-wrap pl-0.5 gap-2">
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Full-Stack MERN + TypeScript</span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Modern UI with Tailwind</span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">REST API Development </span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Auth</span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">AI Features (LLMs)</span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">MongoDB Database Design</span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Responsive Web Apps</span>
-          <span className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]">Performance Optimization</span>
-       </div>
+          {/* Skill Tags */}
+          {[
+            "Full-Stack MERN + TypeScript",
+            "Modern UI with Tailwind",
+            "REST API Development",
+            "Auth",
+            "AI Features (LLMs)",
+            "MongoDB Database Design",
+            "Responsive Web Apps",
+            "Performance Optimization",
+          ].map((skill, index) => (
+            <motion.span
+              key={index}
+              className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]"
+              whileHover={{ scale: 1.05, backgroundColor: "#E5E7EB" }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {skill}
+            </motion.span>
+          ))}
+        </div>
       </Card>
-      <div className="max-w-[36%] flex flex-col justify-evenly gap-4 ">
+      <div className="max-w-[36%] flex flex-col justify-evenly gap-4">
+        <motion.div
+          className="space-y-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <Card className="p-4 rounded-3xl shadow-xl bg-zinc-100">
+            <CardHeader>
+              <p className="bg-slate-200 text-sm w-[90%] rounded-xl px-2"> 🚀Deployed Apps</p>
+            </CardHeader>
+            <CardContent>
+              <h1 className="text-5xl font-bold">3+</h1>
+            </CardContent>
+          </Card>
+          <Card className="p-4 rounded-3xl shadow-xl bg-zinc-100">
+            <CardHeader>
+              <p className="bg-slate-200 text-sm rounded-xl px-2"> 😊Cool Projects</p>
+            </CardHeader>
+            <CardContent>
+              <h1 className="text-5xl font-bold">10+</h1>
+            </CardContent>
+          </Card>
+          <Card className="p-4 rounded-3xl shadow-xl bg-zinc-100">
+            <CardHeader>
+              <p className="bg-slate-200 text-sm rounded-xl px-2"> 🕒Years Expertise</p>
+            </CardHeader>
+            <CardContent>
+              <h1 className="text-7xl font-bold">2+</h1>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+};
 
-      <Card>
-        < CardHeader>
-        <p className="bg-slate-200 text-sm"> 🚀Deployed Apps</p>
-        </CardHeader>
-        <CardContent>
-            <h1 className="text-5xl">3+</h1>
-        </CardContent>
-      </Card>
-      
-      <Card>
-        < CardHeader>
-        <p className="bg-slate-200"> 😊cool Projects</p>
-        </CardHeader> 
-            <h1 className="text-5xl">10+</h1>
-      </Card>
-       <Card>
-        < CardHeader>
-        <p className="bg-slate-200"> 🕒Years Expertise</p>
-        </CardHeader>
-        <CardContent>
-            <h1 className="text-7xl">2+</h1>
-        </CardContent>
-      </Card>
-      
-    </div>
-    </div>
-  )
-}
 function InfoGrid() {
   return (
     <div className="flex flex-col gap-3 min-w-[337px] min-h-screen">
