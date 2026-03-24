@@ -53,11 +53,11 @@ const HireMeForCard = () => {
     <motion.div
       className="flex flex-row justify-between flex-wrap"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1}}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       {/* Left Section: Hire Me For Tags */}
-      <Card className="max-w-[60%] p-6 rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100">
+      <Card className="max-w-[60%] p-6 rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100 hover:shadow-2xl transition-shadow duration-300">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1">
           <Briefcase size={16} /> Hire me For
         </p>
@@ -75,7 +75,7 @@ const HireMeForCard = () => {
           ].map((skill, index) => (
             <motion.span
               key={index}
-              className="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[180px]"
+              className="p-2 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition w-[90%] sm:w-auto cursor-pointer flex items-center gap-2"
               whileHover={{ scale: 1.05, backgroundColor: "#E5E7EB" }}
               whileTap={{ scale: 0.98 }}
             >
@@ -90,26 +90,27 @@ const HireMeForCard = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
+          
         >
-          <Card className="p-4 rounded-3xl shadow-xl bg-zinc-100">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-2xl transition-shadow duration-300">
             <CardHeader>
-              <p className="bg-slate-200 text-sm w-[90%] rounded-xl px-2"> 🚀Deployed Apps</p>
+              <p className="bg-slate-200 text-sm w-[100%] rounded-xl p-1 "> 🚀Deployed Apps</p>
             </CardHeader>
             <CardContent>
               <h1 className="text-5xl font-bold">3+</h1>
             </CardContent>
           </Card>
-          <Card className="p-4 rounded-3xl shadow-xl bg-zinc-100">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-2xl transition-shadow duration-300">
             <CardHeader>
-              <p className="bg-slate-200 text-sm rounded-xl px-2"> 😊Cool Projects</p>
+              <p className="bg-slate-200 text-sm w-[100%] rounded-xl p-1 "> 😊Cool Projects</p>
             </CardHeader>
             <CardContent>
               <h1 className="text-5xl font-bold">10+</h1>
             </CardContent>
           </Card>
-          <Card className="p-4 rounded-3xl shadow-xl bg-zinc-100">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-2xl transition-shadow duration-300">
             <CardHeader>
-              <p className="bg-slate-200 text-sm rounded-xl px-2"> 🕒Years Expertise</p>
+              <p className="bg-slate-200 text-sm w-[100%] rounded-xl p-1 "> 🕒Years Expertise</p>
             </CardHeader>
             <CardContent>
               <h1 className="text-7xl font-bold">2+</h1>
