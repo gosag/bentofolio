@@ -5,42 +5,20 @@ import {motion} from "framer-motion"
 function MySkills(){
     return(
       <div>
-        <Card className="p-2 h-[120px] overflow-hidden">
+        <Card className="p-2 overflow-hidden">
           <p className="bg-[#EEEEF1] w-fit px-2 rounded-md">my skills</p>  
-          <motion.div className="flex" >
-            <div className="w-5/6 overflow-hidden flex ">
-           <div className="flex min-w-28"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
-            <div className="flex min-w-28"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
-            <div className="flex min-w-32"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind CSS</div>
-            <div className="flex min-w-32"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
-            <div className="flex min-w-32"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
-            <div className="flex min-w-32"><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
-            <div className="flex min-w-32"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
-            <div className="flex min-w-32"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
-
-            <div className="flex min-w-32"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div>
-            <div className="flex min-w-32"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
-            <div className="flex min-w-32"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind CSS</div>
-            <div className="flex min-w-32"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
-
-             <div className="flex min-w-32"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div>
-            <div className="flex min-w-32"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
-            <div className="flex min-w-32"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind CSS</div>
-            <div className="flex min-w-32"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
-            <div className="flex min-w-32"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
-            <div className="flex min-w-32"><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
-            <div className="flex min-w-32"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
-            <div className="flex min-w-32"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
-            </div>
-            <div className="border-l-2 border-l-gray-600 w-1/6 overflow-hidden flex">
-                <img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>
-                <img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>
-                <img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>
-                <img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>
-                <img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>
-                <img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>
-                <img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>
-                <img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>
+          <motion.div className="flex flex-col gap-3" >
+            <motion.div className="flex gap-3">
+              <div className="flex min-w-28 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/react-svgrepo-com.svg" alt="React logo" title="React" className="w-10 h-10"/>React</div>
+              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/tailwind-css-svgrepo-com.svg"  alt="Tailwind logo" title="Tailwind CSS" className="w-10 h-10"/>Tailwind</div>
+              <div className="flex min-w-fit bg-zinc-200 border border-zinc-300 text-lg rounded-xl border-r-0 pr-0 "><img src="/skills/javascript-logo-svgrepo-com.svg" alt="JavaScript logo" title="JavaScript" className="w-10 h-10"/>JavaScript</div>
+              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/html-svgrepo-com.svg" alt="HTML logo" title="HTML" className="w-10 h-10"/>HTML</div>
+            </motion.div>
+            <div className="flex gap-3">
+              <div className="flex min-w-fit pr-1 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/typescript-svgrepo-com (1).svg" alt="Typescript Logo" title="Typescript" className="w-10 h-10"/>TypeScript</div> 
+              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js logo" title="Node.js" className="w-10 h-10"/>Node.js</div>
+              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/expressjs-icon (1).svg" alt="Expess" title="Express Logo" className="w-10 h-10"/>Express</div>
+              <div className="flex min-w-32 bg-zinc-200 border border-zinc-300 text-lg rounded-xl"><img src="/skills/git-icon-logo-svgrepo-com.svg" alt="Git Logo" title="Git" className="w-10 h-10"/>Git</div>
             </div>
           </motion.div>
         </Card>
