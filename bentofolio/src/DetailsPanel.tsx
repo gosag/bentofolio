@@ -1,32 +1,68 @@
-import { Card} from "./components/ui/card"
-const today= new Date()
-const ExperiencesArray=[
-    "Architected and deployed full-stack web applications using React, Node.js, Express, and MongoDB",
-        "Designed and implemented type-safe APIs using TypeScript and schema validation (Zod)",
-        "Built AI-powered features including intelligent summarization, quiz generation",
-        "Developed responsive, high-performance UIs using Tailwind CSS",
-        "Implemented authentication & security",
-        "Managed full product lifecycle: idea → system design → development → deployment → iteration",
-        "Optimized application performance through efficient state management, API design, and database queries",
-        "Deployed and maintained applications on modern platforms (e.g., Vercel, Render)"
-]
-function Experiences(){
-    return(
-    <Card className="p-4 h-[430px] overflow-y-auto">
-        <p className="flex items-center w-fit bg-[#EEEEF1] rounded-lg px-2 gap-1 text-slate-600"><svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.15698 3.98246C4.70477 3.44138 4.47867 3.17085 4.21875 3.21252C3.95884 3.25419 3.83724 3.58047 3.59405 4.23302L3.53114 4.40185C3.46203 4.58729 3.42747 4.68 3.36024 4.7483C3.29301 4.8166 3.20072 4.85275 3.01612 4.92505L2.84807 4.99087C2.19847 5.24529 1.87368 5.3725 1.83664 5.63251C1.79959 5.89252 2.07484 6.11314 2.62532 6.55437L2.76774 6.66852C2.92417 6.79391 3.00238 6.8566 3.04766 6.94241C3.09293 7.02822 3.10014 7.12744 3.11456 7.32588L3.12769 7.50654C3.17842 8.20486 3.20379 8.55401 3.44081 8.67304C3.67784 8.79207 3.96954 8.60213 4.55295 8.22227L4.70388 8.124C4.86967 8.01605 4.95256 7.96208 5.04777 7.94682C5.14299 7.93155 5.23974 7.95672 5.43324 8.00707L5.60941 8.0529C6.29036 8.23006 6.63084 8.31864 6.81437 8.13219C6.9979 7.94574 6.90294 7.60774 6.71302 6.93175L6.66388 6.75686C6.60992 6.56476 6.58293 6.46871 6.5965 6.37346C6.61007 6.27822 6.66266 6.19455 6.76783 6.02723L6.86358 5.87489C7.2337 5.28607 7.41875 4.99166 7.29516 4.7574C7.17156 4.52315 6.82117 4.50418 6.12039 4.46625L5.93909 4.45644C5.73994 4.44566 5.64037 4.44027 5.55355 4.39667C5.46672 4.35307 5.40247 4.27619 5.27397 4.12244L5.15698 3.98246Z" fill="#71717A"/>
-        <path d="M4.98571 1.45165L5.0696 1.69081C5.16174 1.95351 5.20781 2.08487 5.29745 2.18162C5.38709 2.27838 5.51015 2.32959 5.75627 2.43201L5.98036 2.52526C6.84648 2.88569 7.27954 3.06591 7.32893 3.43425C7.34949 3.58758 7.2979 3.73124 7.17773 3.89179C7.13711 3.8808 7.09802 3.87184 7.06126 3.86437C6.82011 3.81534 6.51338 3.79881 6.20076 3.78197L5.9763 3.76982C5.93313 3.76749 5.89957 3.76566 5.87081 3.7638C5.85177 3.7415 5.82983 3.71527 5.80155 3.68143L5.65689 3.50834C5.45505 3.26672 5.25757 3.03031 5.07392 2.8662C4.87807 2.69118 4.55068 2.46291 4.10998 2.53356C3.66459 2.60497 3.42701 2.92904 3.29884 3.16034C3.18009 3.37464 3.07329 3.66145 2.96516 3.95183L2.88697 4.16164C2.87377 4.19709 2.86317 4.22549 2.85384 4.24992C2.8294 4.25972 2.80097 4.27087 2.76546 4.28478L2.5567 4.36653C2.26754 4.4797 1.98226 4.59135 1.76983 4.71358C1.54124 4.8451 1.21981 5.08803 1.15607 5.53542C1.09293 5.97856 1.32894 6.30206 1.50759 6.49389C1.64074 6.63687 1.81963 6.78769 2.01064 6.94226C1.29171 7.13731 0.909296 7.21006 0.691956 6.97547C0.447249 6.71133 0.573862 6.2325 0.827087 5.27483L0.892599 5.02707C0.964558 4.75494 1.00054 4.61887 0.982445 4.48393C0.964352 4.349 0.894236 4.23048 0.754003 3.99344L0.626333 3.77763C0.13285 2.94346 -0.113892 2.52638 0.0509005 2.19452C0.215693 1.86265 0.682882 1.83579 1.61726 1.78205L1.859 1.76815C2.12452 1.75289 2.25728 1.74525 2.37305 1.68348C2.48881 1.62171 2.57448 1.5128 2.74582 1.29498L2.90181 1.09667C3.50475 0.330155 3.80622 -0.0531051 4.15278 0.00592684C4.49933 0.0649588 4.66146 0.527187 4.98571 1.45165Z" fill="#71717A"/>
-        </svg>
-        Reviews</p>
-        <h1 className="text-slate-950 text-lg">Here are some of my professional experiences upto {`${today.getDate()}/${today.getUTCMonth() + 1}/${today.getFullYear()}`}</h1>
-        <div className="overflow-y-auto flex flex-col gap-2">
-        {ExperiencesArray.map((exp, index) => (
-            <Card key={index} className="border-none border-transparent bg-gray-100 text-gray-800 p-2 min-h-fit">
-                <p>{exp}</p>
-            </Card>
-        ))}
+import { Card } from "./components/ui/card";
+import { motion } from "framer-motion";
+
+const today = new Date();
+const ExperiencesArray = [
+  "Architected and deployed full-stack web applications using React, Node.js, Express, and MongoDB",
+  "Designed and implemented type-safe APIs using TypeScript and schema validation (Zod)",
+  "Built AI-powered features including intelligent summarization, quiz generation",
+  "Developed responsive, high-performance UIs using Tailwind CSS",
+  "Implemented authentication & security protocols",
+  "Managed full product lifecycle: idea → system design → development → deployment → iteration",
+  "Optimized application performance through efficient state management, API design, and database queries",
+  "Deployed and maintained applications on modern platforms (e.g., Vercel, Render)"
+];
+
+const duplicatedExperiences = [...ExperiencesArray, ...ExperiencesArray];
+
+function Experiences() {
+  return (
+    <Card className="h-[430px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl">
+      <div className="z-10 mb-4 shrink-0">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          Experience
         </div>
-    </Card>)
+        <h1 className="text-zinc-900 text-lg font-bold leading-snug tracking-tight">
+          Professional Milestones up to {`${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`}
+        </h1>
+      </div>
+
+      {/* Scrolling Area with Gradient Fade Mask */}
+      <div 
+        className="relative flex-1 overflow-hidden"
+        style={{
+          maskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)"
+        }}
+      >
+        <motion.div
+          className="flex flex-col gap-3 pb-3"
+          animate={{ y: ["0%", "-50%"] }}
+          transition={{
+            y: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 25, // Adjust this value to make it scroll faster or slower
+              ease: "linear",
+            },
+          }}
+        >
+          {duplicatedExperiences.map((exp, index) => (
+            <div 
+              key={index} 
+              className="p-4 bg-zinc-50 border border-zinc-100 rounded-2xl text-sm font-medium text-zinc-700 leading-relaxed shadow-sm"
+            >
+              {exp}
+            </div>
+          ))}
+        </motion.div>
+      </div>
+      
+    </Card>
+  );
 }
 function CV(){
     return(
