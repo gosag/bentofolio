@@ -10,7 +10,7 @@ import {
 function SocialBar(){
     return(
         <div className="flex lg:flex-col lg:w-20 gap-2">
-        <Card className="w-20 h-20 rounded-xl flex justify-center items-center">
+        <Card className="w-20 h-20 rounded-xl flex justify-center items-center !border-slate-200">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" fill="#EEEEF1"/>
             <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#E1E1E6"/>
