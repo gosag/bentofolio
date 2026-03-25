@@ -1,4 +1,4 @@
-import {Card,CardContent,CardFooter, CardHeader} from "./components/ui/card";
+import {Card,CardContent,CardFooter} from "./components/ui/card";
 import { Copy } from "lucide-react";
 import InfoGrid from "./InfoGrid";
 import {motion} from "framer-motion"
@@ -54,38 +54,80 @@ function GithubDisplay(){
         </div>
     )
 }
+import { ArrowUpRight } from 'lucide-react'; 
 
-function ProjectsCard(){
-    return(
-          <Card className="w-full border-none bg: h-[230px] border-transparent  pb-2 shadow-xl">
-            <CardHeader>
-                   <p className="bg-[#EEEEF1] text-[#71717A] rounded-lg w-fit px-3 flex justify-center items-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.28192 4.43904C1.37173 4.07496 0.916626 3.89292 0.916626 3.66671C0.916626 3.4405 1.37173 3.25846 2.28192 2.89438L3.56914 2.37949C4.47934 2.01541 4.93443 1.83337 5.49996 1.83337C6.06548 1.83337 6.52058 2.01541 7.43078 2.37949L8.718 2.89438C9.62819 3.25846 10.0833 3.4405 10.0833 3.66671C10.0833 3.89292 9.62819 4.07496 8.718 4.43904L7.43078 4.95392C6.52058 5.318 6.06548 5.50004 5.49996 5.50004C4.93443 5.50004 4.47934 5.318 3.56914 4.95392L2.28192 4.43904Z" fill="#09090B"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.916626 3.66671C0.916626 3.89292 1.37173 4.07496 2.28192 4.43904L3.56914 4.95392C4.47934 5.318 4.93443 5.50004 5.49996 5.50004C6.06548 5.50004 6.52058 5.318 7.43078 4.95392L8.718 4.43904C9.62819 4.07496 10.0833 3.89292 10.0833 3.66671C10.0833 3.4405 9.62819 3.25846 8.718 2.89438L7.43078 2.37949C6.52058 2.01541 6.06548 1.83337 5.49996 1.83337C4.93443 1.83337 4.47934 2.01541 3.56914 2.37949L2.28192 2.89438C1.37173 3.25846 0.916626 3.4405 0.916626 3.66671Z" fill="#71717A"/>
-                    <path d="M8.718 6.27237L7.43078 6.78725C6.52058 7.15133 6.06548 7.33337 5.49996 7.33337C4.93443 7.33337 4.47934 7.15133 3.56914 6.78725L2.28192 6.27237C1.37173 5.90829 0.916626 5.72625 0.916626 5.50004C0.916626 5.29613 1.28641 5.12811 2.02599 4.8303L3.46561 5.40616C4.31291 5.74525 4.84544 5.95837 5.49996 5.95837C6.15448 5.95837 6.68701 5.74525 7.53431 5.40616L8.97393 4.8303C9.7135 5.12811 10.0833 5.29613 10.0833 5.50004C10.0833 5.72625 9.62819 5.90829 8.718 6.27237Z" fill="#71717A"/>
-                    <path d="M8.718 8.10562L7.43078 8.62051C6.52058 8.98459 6.06548 9.16663 5.49996 9.16663C4.93443 9.16663 4.47934 8.98459 3.56914 8.62051L2.28192 8.10562C1.37173 7.74154 0.916626 7.5595 0.916626 7.33329C0.916626 7.12938 1.28641 6.96137 2.02599 6.66355L3.46561 7.23941C4.31291 7.5785 4.84544 7.79163 5.49996 7.79163C6.15448 7.79163 6.68701 7.5785 7.53431 7.23941L8.97393 6.66355C9.7135 6.96137 10.0833 7.12938 10.0833 7.33329C10.0833 7.5595 9.62819 7.74154 8.718 8.10562Z" fill="#71717A"/>
-                    </svg>
-                    My Work</p>
-                <h1 className="text-lg font-semibold">Selected Projects</h1>
-            </CardHeader>
-            <CardContent className="flex gap-2">
-                <div className=" border border-gray-400 rounded-2xl p-1 max-w-[200px]">
-                 <p><span className="text-blue-500 font-bold">EchoStudy:-</span> an AI-powered learning platform</p>
-                 <img src="/EchoStudy.png" alt="EchoStudy" className="max-w-[60%]"/>  
-                 <a href="https://echostudy.gosagirma.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit EchoStudy</a>
-                </div>
-                <div>   
-                <div className=" border border-gray-400 rounded-2xl p-1 max-w-[200px]">
-                  <p><span className="text-blue-500 font-bold">Movie App:-</span> a movie app built with React & IMDB </p>
-                  <img src="/movieApp.png" alt="Movie App" className="max-w-[100%]"/>
-                  <a href="https://movie-app-theta-steel.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit Movie App</a>  
-                </div>
-                </div> 
+function ProjectsCard() {
+  return (
+    <div className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm ">
+      
+      <div className="flex items-center gap-3 mb-4 shrink-0">
+        <span className="bg-zinc-100 text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
+          <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.28192 4.43904C1.37173 4.07496 0.916626 3.89292 0.916626 3.66671C0.916626 3.4405 1.37173 3.25846 2.28192 2.89438L3.56914 2.37949C4.47934 2.01541 4.93443 1.83337 5.49996 1.83337C6.06548 1.83337 6.52058 2.01541 7.43078 2.37949L8.718 2.89438C9.62819 3.25846 10.0833 3.4405 10.0833 3.66671C10.0833 3.89292 9.62819 4.07496 8.718 4.43904L7.43078 4.95392C6.52058 5.318 6.06548 5.50004 5.49996 5.50004C4.93443 5.50004 4.47934 5.318 3.56914 4.95392L2.28192 4.43904Z" fill="currentColor"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M0.916626 3.66671C0.916626 3.89292 1.37173 4.07496 2.28192 4.43904L3.56914 4.95392C4.47934 5.318 4.93443 5.50004 5.49996 5.50004C6.06548 5.50004 6.52058 5.318 7.43078 4.95392L8.718 4.43904C9.62819 4.07496 10.0833 3.89292 10.0833 3.66671C10.0833 3.4405 9.62819 3.25846 8.718 2.89438L7.43078 2.37949C6.52058 2.01541 6.06548 1.83337 5.49996 1.83337C4.93443 1.83337 4.47934 2.01541 3.56914 2.37949L2.28192 2.89438C1.37173 3.25846 0.916626 3.4405 0.916626 3.66671Z" fill="currentColor" className="opacity-50"/>
+          </svg>
+          My Work
+        </span>
+        <h1 className="text-sm md:text-base font-bold tracking-tight text-zinc-900 ">
+          Selected Projects
+        </h1>
+      </div>
 
-            </CardContent>
-          </Card>
-    
-    )
+      <div className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] h-full">
+        <a 
+          href="https://echostudy.gosagirma.me" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 dark:border-zinc-800 snap-start overflow-hidden"
+        >
+          <div className="z-10">
+            <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2">
+              EchoStudy
+            </h2>
+            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed">
+              An AI-powered study hub designed to optimize learning and manage educational resources efficiently.
+            </p>
+          </div>
+          
+          <div className="flex items-end justify-between z-10 mt-2">
+            <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
+              <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            
+            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1">
+              <ArrowUpRight size={16} strokeWidth={2.5} />
+            </div>
+          </div>
+        </a>
+        <a 
+          href="https://movie-app-theta-steel.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden"
+        >
+          <div className="z-10">
+            <h2 className="text-sm font-bold text-zinc-900 mb-1">
+              Movie App
+            </h2>
+            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed">
+              A responsive cinematic explorer built with React, leveraging the IMDB API for real-time data fetching.
+            </p>
+          </div>
+          
+          <div className="flex items-end justify-between z-10 mt-2">
+            <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
+              <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            
+            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1">
+              <ArrowUpRight size={16} strokeWidth={2.5} />
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  );
 }
 export default function ProfileCard() {
     return(
