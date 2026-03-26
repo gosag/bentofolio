@@ -47,7 +47,7 @@ function GithubDisplay(){
 
     return(
         <div className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300">
-        <div className="w-full border-blue-400 border rounded-lg px-4 flex flex-col justify-center items-center bg-white">
+        <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-white">
             <p className="text-center">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
