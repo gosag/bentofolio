@@ -4,7 +4,6 @@ import {
   Linkedin,
   Github,
   Send,
-  Briefcase,
   MessageCircle,
   X
 } from "lucide-react";
@@ -14,7 +13,6 @@ const socials = [
   { icon: Github, href: "#", label: "Github", color: "hover:text-zinc-900" },
   { icon: Send, href: "#", label: "Telegram", color: "hover:text-sky-500" },
   { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500" },
-  { icon: Briefcase, href: "#", label: "Upwork", color: "hover:text-emerald-600" },
   { icon: X, href: "#", label: "Twitter", color: "hover:text-black" },
 ];
 
