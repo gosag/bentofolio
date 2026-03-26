@@ -82,13 +82,13 @@ function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
 const HireMeForCard = () => {
   return (
     <motion.div
-      className="flex flex-row justify-between flex-wrap h-[450px]"
+      className="flex flex-row justify-between flex-wrap h-fit md:h-[450px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1}}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       {/* Left Section: Hire Me For Tags */}
-      <Card className="max-w-[60%] h-full py-3 px-6 bt-0  rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100 hover:shadow-2xl transition-shadow duration-300">
+      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100 hover:shadow-2xl transition-shadow duration-300">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1">
           <Briefcase size={16} /> Hire me For
         </p>
