@@ -84,7 +84,7 @@ function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
 const HireMeForCard = () => {
   return (
     <motion.div
-      className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200 bg-white"
+      className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1}}
       transition={{ delay: 0.2, duration: 0.5 }}
