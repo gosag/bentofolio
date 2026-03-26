@@ -12,7 +12,9 @@ const row2 = [
   { name: "TypeScript", icon: "/skills/typescript-svgrepo-com (1).svg" },
   { name: "Node.js", icon: "/skills/nodejs-icon-svgrepo-com.svg" },
   { name: "Express", icon: "/skills/expressjs-icon (1).svg" },
+  {name: "MongoDB", icon: "/skills/mongo-svgrepo-com.svg"},
   { name: "Git", icon: "/skills/git-icon-logo-svgrepo-com.svg" },
+  
 ];
 const getDuplicatedItems = (arr:any, duplications = 4) => {
   return Array(duplications).fill(arr).flat();
@@ -82,13 +84,13 @@ function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
 const HireMeForCard = () => {
   return (
     <motion.div
-      className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[450px]"
+      className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200 bg-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1}}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       {/* Left Section: Hire Me For Tags */}
-      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl bg-gradient-to-r from-indigo-100 via-purple-200 to-pink-100 hover:shadow-2xl transition-shadow duration-300">
+      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl  hover:shadow-2xl transition-shadow duration-300">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1">
           <Briefcase size={16} /> Hire me For
         </p>

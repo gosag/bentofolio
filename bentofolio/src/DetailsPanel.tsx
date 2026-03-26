@@ -17,7 +17,7 @@ const duplicatedExperiences = [...ExperiencesArray, ...ExperiencesArray];
 
 function Experiences() {
   return (
-    <Card className="h-[430px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl">
+    <Card className="h-[432px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl">
       <div className="z-10 mb-4 shrink-0">
         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -70,7 +70,7 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 h-[433px] overflow-y-auto"
+      className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto"
     >
       <div className="flex justify-between items-center p-5 border-b border-slate-100 bg-white/80 backdrop-blur-sm z-10 sticky top-0">
         <div className="flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide">
