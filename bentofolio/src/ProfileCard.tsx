@@ -2,7 +2,16 @@ import {Card,CardContent,CardFooter} from "./components/ui/card";
 import { Copy } from "lucide-react";
 import InfoGrid from "./InfoGrid";
 import {motion} from "framer-motion"
+import { useState } from "react";
 const IdentityCard = () => {
+  const email="gosagirma441@gmail.com"
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  }
   return (
     <motion.div
       className="max-full bg-zinc-100 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
@@ -34,9 +43,9 @@ const IdentityCard = () => {
         </CardContent>
 
         <CardFooter className="border-t-0 flex items-center justify-center p-0">
-          <div className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer">
+          <div onClick={handleCopyEmail} className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer">
             <Copy size={20} />
-            <p className="ml-2">gosagirma441@gmail.com</p>
+            <p className="ml-2">{isCopied ? "Email Copied!" : email}</p>
           </div>
         </CardFooter>
       </Card>
