@@ -132,7 +132,7 @@ function ProjectsCard() {
 export default function ProfileCard() {
     return(
         <div className="flex flex-col gap-3 ">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3 min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3">
             <div className="flex flex-col gap-8 min-w-[337px]">
             <IdentityCard />
             <GithubDisplay />

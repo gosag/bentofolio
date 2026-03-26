@@ -98,20 +98,17 @@ function Experiences() {
         </motion.button>
       </div>
 
-      {/* Scrollable Content Area */}
       <div className="p-6 overflow-y-auto flex-1 custom-scrollbar text-slate-600">
         
-        {/* About Section */}
         <section className="mb-6">
           <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-2 text-lg">
             <span>🧑‍💻</span> Product-Minded Engineer
           </h3>
           <p className="text-sm leading-relaxed">
-            Results-driven Full-Stack Developer (MERN & TypeScript) focused on building scalable, AI-powered applications. I bridge the gap between clean backend architecture and intuitive, pixel-perfect frontend experiences.
+            Results-driven Developer focused on building scalable, AI-powered applications. I bridge the gap between clean backend architecture and intuitive, pixel-perfect frontend experiences.
           </p>
         </section>
 
-        {/* What I Do Section */}
         <section className="mb-6">
           <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-3 text-lg">
             <span>⚡️</span> Core Competencies
@@ -133,7 +130,6 @@ function Experiences() {
           </ul>
         </section>
 
-        {/* Experience / Projects Section */}
         <section>
           <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-3 text-lg">
             <span>🚀</span> Recent Highlights
