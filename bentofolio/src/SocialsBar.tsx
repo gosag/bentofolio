@@ -9,11 +9,11 @@ import {
 } from "lucide-react";
 
 const socials = [
-  { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-600" },
-  { icon: Github, href: "#", label: "Github", color: "hover:text-zinc-900" },
-  { icon: Send, href: "#", label: "Telegram", color: "hover:text-sky-500" },
+  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600" },
+  { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900" },
+  { icon: Send, href: "https://t.me/gosa_1", label: "Telegram", color: "hover:text-sky-500" },
   { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500" },
-  { icon: X, href: "#", label: "Twitter", color: "hover:text-black" },
+  { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black" },
 ];
 
 // Animation Variants

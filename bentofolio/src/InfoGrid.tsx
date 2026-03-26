@@ -14,8 +14,6 @@ const row2 = [
   { name: "Express", icon: "/skills/expressjs-icon (1).svg" },
   { name: "Git", icon: "/skills/git-icon-logo-svgrepo-com.svg" },
 ];
-
-// Helper to duplicate arrays to ensure the screen is filled for the loop
 const getDuplicatedItems = (arr:any, duplications = 4) => {
   return Array(duplications).fill(arr).flat();
 };
@@ -35,8 +33,6 @@ function MySkills() {
         The mask-image creates the beautiful fade-out effect on the left and right edges.
       */}
       <div className="flex flex-col gap-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] w-full">
-        
-        {/* ROW 1: Moves Left */}
         <motion.div
           className="flex gap-3 w-max"
           animate={{ x: ["0%", "-50%"] }}
