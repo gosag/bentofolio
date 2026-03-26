@@ -15,7 +15,7 @@ const socials = [
   { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black" },
   { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900" },
   { icon: Send, href: "https://t.me/gosa_1", label: "Telegram", color: "hover:text-sky-500" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500" },
+  { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500 hidden sm:block" },
   
 ];
 
