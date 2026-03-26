@@ -82,7 +82,7 @@ function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
 const HireMeForCard = () => {
   return (
     <motion.div
-      className="flex flex-row justify-between flex-wrap h-fit md:h-[450px]"
+      className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[450px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1}}
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -115,7 +115,7 @@ const HireMeForCard = () => {
           ))}
         </div>
       </Card>
-      <div className="max-w-[36%] h-full flex flex-col">
+      <div className="max-w-[36%] h-full flex flex-col justify-evenly">
         <motion.div
           className="space-y-2"
           initial={{ opacity: 0 }}
