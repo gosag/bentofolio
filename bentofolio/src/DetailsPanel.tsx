@@ -72,7 +72,6 @@ function Experiences() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 h-[433px] overflow-y-auto"
     >
-      {/* Header section - Sticky for easy access to the download button */}
       <div className="flex justify-between items-center p-5 border-b border-slate-100 bg-white/80 backdrop-blur-sm z-10 sticky top-0">
         <div className="flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -161,23 +160,6 @@ function Experiences() {
         </section>
 
       </div>
-
-      {/* Add this to your global CSS or Tailwind configuration for the scrollbar */}
-      <style dangerouslySetInnerHTML={{__html: `
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #cbd5e1;
-          border-radius: 20px;
-        }
-        .group:hover .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #94a3b8;
-        }
-      `}} />
     </motion.div>
   );
 }
