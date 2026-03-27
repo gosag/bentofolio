@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 const socials = [
-  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600" },
+  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600 " },
   { icon: Mail, href: "mailto:gosagirma441@gmail.com", label: "Email", color: "hover:text-red-500" },
   { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black" },
   { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900" },
@@ -27,7 +27,7 @@ const containerVariants = {
     scale: 1,
     transition: { staggerChildren: 0.1 }
   }
-};
+}; 
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
@@ -35,25 +35,30 @@ const itemVariants = {
 };
 
 function SocialBar() {
-  const savedTheme=localStorage.getItem("theme") as "light" | "dark" | null
-  const [theme,setTheme]=useState<"light" | "dark">(savedTheme || "light")
-  const toggleTheme=()=>{
-    setTheme(()=> theme==="light"?"dark":"light")
-    localStorage.setItem("theme", theme==="light"?"dark":"light")
-}
-useEffect(() => {
-  document.documentElement.classList.remove("light", "dark");
-  document.documentElement.classList.add(theme);
-}, [theme]);
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark" || savedTheme === "light") return savedTheme;
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+    }
+    return "light";
+  });
+  useEffect(() => { 
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+  const toggleTheme = () => setTheme(prev => prev === "light" ? "dark" : "light");
   return (
     <motion.div 
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="flex flex-row lg:flex-col gap-3 w-full lg:w-20 items-center transition-all duration-300"
+      className="flex flex-row lg:flex-col gap-3 w-full lg:w-20 items-center transition-all duration-300 "
     >
       {/* The Anchor/Status Card */}
-      <Card onClick={toggleTheme} className="w-16 h-16 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition-shadow cursor-default">
+      <Card onClick={toggleTheme} className="w-12 h-12 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition-shadow cursor-default dark:bg-zinc-800 dark:border-zinc-700 ">
         <motion.svg 
           animate={{ rotate: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -65,7 +70,7 @@ useEffect(() => {
       </Card>
 
       {/* Main Social Links Bar */}
-      <div className="flex flex-row flex-1 lg:flex-col lg:w-20 justify-around items-center p-2 lg:py-4 gap-4 bg-white/80 backdrop-blur-sm border border-zinc-200 dark:bg-zinc-900/50 rounded-2xl shadow-sm">
+      <div className="flex flex-row flex-1 lg:flex-col lg:w-20 justify-around items-center p-2 lg:py-4 gap-4 bg-white/80 backdrop-blur-sm border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 rounded-2xl shadow-sm">
         {socials.map((social, index) => (
           <motion.a
             key={index}

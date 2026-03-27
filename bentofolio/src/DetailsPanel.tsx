@@ -22,15 +22,15 @@ function Experiences() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
-    <Card className="h-[432px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl">
+    <Card className="h-[432px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl dark:bg-zinc-900 dark:border-zinc-800">
       <div className="z-10 mb-4 shrink-0">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
           Experience
         </div>
-        <h1 className="text-zinc-900 text-lg font-bold leading-snug tracking-tight">
+        <h1 className="text-zinc-900 text-lg font-bold leading-snug tracking-tight dark:text-zinc-50">
           Professional Milestones up to {`${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`}
         </h1>
       </div>
@@ -58,7 +58,7 @@ function Experiences() {
           {duplicatedExperiences.map((exp, index) => (
             <div 
               key={index} 
-              className="p-4 bg-zinc-50 border border-zinc-100 rounded-2xl text-sm font-medium text-zinc-700 leading-relaxed shadow-sm"
+              className="p-4 bg-zinc-50 border border-zinc-100 rounded-2xl text-sm font-medium text-zinc-700 leading-relaxed shadow-sm dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-300"
             >
               {exp}
             </div>
@@ -76,10 +76,10 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto"
+      className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 dark:bg-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto dark:border-zinc-800"
     >
-      <div className="flex justify-between items-center p-5 border-b border-slate-100 bg-white/80 backdrop-blur-sm z-10 sticky top-0">
-        <div className="flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide">
+      <div className="flex justify-between items-center p-5 border-b border-slate-100 bg-white/80 backdrop-blur-sm z-10 sticky top-0 dark:bg-zinc-900">
+        <div className="flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide dark:bg-zinc-700 dark:text-zinc-100">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -93,7 +93,7 @@ function Experiences() {
         <motion.button 
           whileHover={{ scale: 1.05, backgroundColor: "#f1f5f9" }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 rounded-full text-slate-400 hover:text-blue-600 transition-colors cursor-pointer"
+          className="p-2 rounded-full text-slate-400 hover:text-blue-600 transition-colors cursor-pointer "
           title="Download CV"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -104,10 +104,10 @@ function Experiences() {
         </motion.button>
       </div>
 
-      <div className="p-6 overflow-y-auto flex-1 custom-scrollbar text-slate-600">
+      <div className="p-6 overflow-y-auto flex-1 custom-scrollbar text-slate-600 dark:bg-zinc-900 dark:text-zinc-200">
         
         <section className="mb-6">
-          <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-2 text-lg">
+          <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-2 text-lg dark:text-zinc-50 ">
             <span>🧑‍💻</span> Product-Minded Engineer
           </h3>
           <p className="text-sm leading-relaxed">
@@ -116,7 +116,7 @@ function Experiences() {
         </section>
 
         <section className="mb-6">
-          <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-3 text-lg">
+          <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-3 text-lg dark:text-zinc-100">
             <span>⚡️</span> Core Competencies
           </h3>
           <ul className="grid grid-cols-1 gap-2 text-sm">
@@ -137,7 +137,7 @@ function Experiences() {
         </section>
 
         <section>
-          <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-3 text-lg">
+          <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-3 text-lg dark:text-zinc-50">
             <span>🚀</span> Recent Highlights
           </h3>
           <div className="relative border-l-2 border-slate-100 pl-4 ml-2 space-y-4">

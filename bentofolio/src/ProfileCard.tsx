@@ -14,12 +14,12 @@ const IdentityCard = () => {
   }
   return (
     <motion.div
-      className="max-full bg-zinc-100 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+      className="max-full bg-zinc-100 dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
-      <Card className="bg-white shadow-lg rounded-3xl p-6">
+      <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-zinc-900 dark:border dark:border-zinc-800">
         <div className="flex flex-row items-center gap-4">
           <img
             src="/profile.jpg"
@@ -27,23 +27,23 @@ const IdentityCard = () => {
             className="rounded-full w-20 h-20 object-cover"
           />
           <div>
-            <p className="text-md w-fit px-2 bg-zinc-300 text-[#71717A] rounded-lg">
+            <p className="text-md w-fit px-2 bg-zinc-300 text-[#71717A] rounded-lg dark:bg-zinc-800 dark:text-zinc-300">
               ✌️ Welcome
             </p>
-            <h1 className="mt-4 text-2xl font-semibold">Gosa Girma</h1>
-            <h4 className="text-lg">I'm a Full stack Web Developer</h4>
+            <h1 className="mt-4 text-2xl font-semibold dark:text-zinc-50">Gosa Girma</h1>
+            <h4 className="text-lg dark:text-zinc-300">I'm a Full stack Web Developer</h4>
           </div>
         </div>
 
         <CardContent>
-          <p className="text-[#71717A]">
+          <p className="text-[#71717A] dark:text-zinc-400">
             I turn ideas into production-ready web applications, managing the
             entire journey from concept to deployment and iteration.
           </p>
         </CardContent>
 
         <CardFooter className="border-t-0 flex items-center justify-center p-0">
-          <div onClick={handleCopyEmail} className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer">
+          <div onClick={handleCopyEmail} className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-100">
             <Copy size={20} />
             <p className="ml-2">{isCopied ? "Email Copied!" : email}</p>
           </div>
@@ -53,16 +53,15 @@ const IdentityCard = () => {
   );
 };
 function GithubDisplay(){
-
     return(
         <motion.div
-          className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300 "
+          className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-800"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-        <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-white">
-            <p className="text-center font-semibold text-zinc-900">600+ contributions in the last year</p>
+        <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-white dark:bg-zinc-900 dark:border dark:border-zinc-800">
+            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
         </motion.div>
@@ -76,16 +75,16 @@ function ProjectsCard() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }} 
-    className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm ">
+    className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-zinc-900 dark:border dark:border-zinc-800 ">
       <div className="flex items-center gap-3 mb-4 shrink-0">
-        <span className="bg-zinc-100 text-zinc-600  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
+        <span className="bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.28192 4.43904C1.37173 4.07496 0.916626 3.89292 0.916626 3.66671C0.916626 3.4405 1.37173 3.25846 2.28192 2.89438L3.56914 2.37949C4.47934 2.01541 4.93443 1.83337 5.49996 1.83337C6.06548 1.83337 6.52058 2.01541 7.43078 2.37949L8.718 2.89438C9.62819 3.25846 10.0833 3.4405 10.0833 3.66671C10.0833 3.89292 9.62819 4.07496 8.718 4.43904L7.43078 4.95392C6.52058 5.318 6.06548 5.50004 5.49996 5.50004C4.93443 5.50004 4.47934 5.318 3.56914 4.95392L2.28192 4.43904Z" fill="currentColor"/>
             <path fillRule="evenodd" clipRule="evenodd" d="M0.916626 3.66671C0.916626 3.89292 1.37173 4.07496 2.28192 4.43904L3.56914 4.95392C4.47934 5.318 4.93443 5.50004 5.49996 5.50004C6.06548 5.50004 6.52058 5.318 7.43078 4.95392L8.718 4.43904C9.62819 4.07496 10.0833 3.89292 10.0833 3.66671C10.0833 3.4405 9.62819 3.25846 8.718 2.89438L7.43078 2.37949C6.52058 2.01541 6.06548 1.83337 5.49996 1.83337C4.93443 1.83337 4.47934 2.01541 3.56914 2.37949L2.28192 2.89438C1.37173 3.25846 0.916626 3.4405 0.916626 3.66671Z" fill="currentColor" className="opacity-50"/>
           </svg>
           My Work
         </span>
-        <h1 className="text-sm md:text-base font-bold tracking-tight text-zinc-900 ">
+        <h1 className="text-sm md:text-base font-bold tracking-tight text-zinc-900 dark:text-zinc-50 ">
           Selected Projects
         </h1>
       </div>
@@ -95,13 +94,13 @@ function ProjectsCard() {
           href="https://echostudy.gosagirma.me" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden"
+          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
         >
           <div className="z-10">
-            <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2">
+            <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
               EchoStudy
             </h2>
-            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed">
+            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
               An AI-powered study hub designed to optimize learning and manage educational resources efficiently.
             </p>
           </div>
@@ -111,7 +110,7 @@ function ProjectsCard() {
               <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" />
             </div>
             
-            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1">
+            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
               <ArrowUpRight size={16} strokeWidth={2.5} />
             </div>
           </div>
@@ -120,13 +119,13 @@ function ProjectsCard() {
           href="https://movie-app-theta-steel.vercel.app" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden"
+          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
         >
           <div className="z-10">
-            <h2 className="text-sm font-bold text-zinc-900 mb-1">
+            <h2 className="text-sm font-bold text-zinc-900 mb-1 dark:text-zinc-50">
               Movie App
             </h2>
-            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed">
+            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200">
               A responsive cinematic explorer built with React, leveraging the IMDB API for real-time data fetching.
             </p>
           </div>
@@ -136,7 +135,7 @@ function ProjectsCard() {
               <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" />
             </div>
             
-            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1">
+            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600 dark:hover:text-white">
               <ArrowUpRight size={16} strokeWidth={2.5} />
             </div>
           </div>
