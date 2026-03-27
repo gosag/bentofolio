@@ -35,9 +35,11 @@ const itemVariants = {
 };
 
 function SocialBar() {
-  const [theme,setTheme]=useState<"light" | "dark">("light")
+  const savedTheme=localStorage.getItem("theme") as "light" | "dark" | null
+  const [theme,setTheme]=useState<"light" | "dark">(savedTheme || "light")
   const toggleTheme=()=>{
     setTheme(()=> theme==="light"?"dark":"light")
+    localStorage.setItem("theme", theme==="light"?"dark":"light")
 }
 useEffect(() => {
   document.documentElement.classList.remove("light", "dark");
