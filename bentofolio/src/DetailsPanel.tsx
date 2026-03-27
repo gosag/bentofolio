@@ -17,6 +17,11 @@ const duplicatedExperiences = [...ExperiencesArray, ...ExperiencesArray];
 
 function Experiences() {
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+    >
     <Card className="h-[432px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl">
       <div className="z-10 mb-4 shrink-0">
         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200">
@@ -62,6 +67,7 @@ function Experiences() {
       </div>
       
     </Card>
+    </motion.div>
   );
 }
  function CVBentoCard() {

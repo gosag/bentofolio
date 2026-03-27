@@ -15,7 +15,7 @@ const IdentityCard = () => {
   return (
     <motion.div
       className="max-full bg-zinc-100 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
@@ -55,20 +55,28 @@ const IdentityCard = () => {
 function GithubDisplay(){
 
     return(
-        <div className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300 ">
+        <motion.div
+          className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300 "
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
         <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-white">
             <p className="text-center font-semibold text-zinc-900">600+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
         </div>
-        </div>
+        </motion.div>
     )
 }
 import { ArrowUpRight } from 'lucide-react'; 
 
 function ProjectsCard() {
   return (
-    <div className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm ">
-      
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.5 }} 
+    className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm ">
       <div className="flex items-center gap-3 mb-4 shrink-0">
         <span className="bg-zinc-100 text-zinc-600  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +143,7 @@ function ProjectsCard() {
         </a>
 
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default function ProfileCard() {

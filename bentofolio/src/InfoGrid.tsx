@@ -22,7 +22,10 @@ const getDuplicatedItems = (arr:any, duplications = 4) => {
 
 function MySkills() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
       className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
       hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out"
@@ -63,7 +66,7 @@ function MySkills() {
           ))}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -85,8 +88,8 @@ const HireMeForCard = () => {
   return (
     <motion.div
       className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       {/* Left Section: Hire Me For Tags */}
