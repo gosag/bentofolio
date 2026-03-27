@@ -58,7 +58,7 @@ function SocialBar() {
       className="flex flex-row lg:flex-col gap-3 w-full lg:w-20 items-center transition-all duration-300 "
     >
       {/* The Anchor/Status Card */}
-      <Card onClick={toggleTheme} className="w-12 h-12 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition-shadow cursor-default dark:bg-zinc-800 dark:border-zinc-700 ">
+      <Card onClick={toggleTheme} className="w-12 h-12 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition-shadow cursor-default dark:bg-zinc-900 dark:border-zinc-800 ">
         <motion.svg 
           animate={{ rotate: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -80,7 +80,7 @@ function SocialBar() {
             variants={itemVariants}
             whileHover={{ scale: 1.15, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className={`relative group p-2 rounded-xl bg-zinc-100 border border-zinc-200 text-zinc-500 transition-all duration-200 ${social.color} hover:bg-white hover:shadow-sm hover:border-zinc-300`}
+            className={`relative group p-2 rounded-xl bg-zinc-100 border border-zinc-200 text-zinc-500 transition-all duration-200 ${social.color} hover:bg-white hover:shadow-sm hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-100`}
           >
             <social.icon size={20} strokeWidth={2.25} />
             <span className="absolute hidden group-hover:block lg:hidden bottom-full mb-3 px-2 py-1 bg-zinc-800 text-white text-[10px] rounded pointer-events-none whitespace-nowrap z-50">
