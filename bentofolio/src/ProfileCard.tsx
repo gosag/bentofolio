@@ -19,7 +19,7 @@ const IdentityCard = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
-      <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-zinc-900 dark:border dark:border-zinc-800">
+      <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-zinc-900 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border-zinc-800">
         <div className="flex flex-row items-center gap-4">
           <img
             src="/profile.jpg"
@@ -75,7 +75,7 @@ function ProjectsCard() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }} 
-    className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-zinc-900 dark:border dark:border-zinc-800 ">
+    className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
       <div className="flex items-center gap-3 mb-4 shrink-0">
         <span className="bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
