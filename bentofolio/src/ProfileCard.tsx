@@ -14,12 +14,12 @@ const IdentityCard = () => {
   }
   return (
     <motion.div
-      className="max-full bg-zinc-100 dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 "
+      className="max-full bg-zinc-100 dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
-      <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-zinc-900 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border-zinc-800">
+      <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-zinc-900 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border-zinc-900">
         <div className="flex flex-row items-center gap-4">
           <img
             src="/profile.jpg"
