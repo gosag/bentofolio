@@ -60,13 +60,13 @@ function SocialBar() {
       className="flex flex-row lg:flex-col gap-3 w-full lg:w-20 items-center transition-all duration-300 "
     >
       {/* The Anchor/Status Card */}
-      <Card onClick={toggleTheme} className="w-12 h-12 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition-shadow cursor-default dark:bg-zinc-900 dark:border-zinc-800 ">
-
+      <Card onClick={toggleTheme} className="w-12 h-12 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition cursor-default dark:bg-zinc-900 dark:border-zinc-800 hover:scale-105">
         <motion.div 
+        initial={{rotate:theme==="light"?180:180}}
         animate={{ rotate: theme === "light" ? 0 : 360 }}
         transition={{duration:0.5}}
-        className="z-50"
-        >{theme !== "light" ? <Sun size={26} strokeWidth={2.25} className="text-yellow-500 z-50" /> : <Moon size={28} strokeWidth={2.25} className="text-gray-400 z-50" />}
+        className="z-50 "
+        >{theme !== "light" ? <Sun size={26} strokeWidth={2.25} className="text-yellow-500 z-50" /> : <Moon size={26} strokeWidth={2.25} className="text-gray-400 z-50" />}
        </motion.div>
       </Card>
 

@@ -24,7 +24,7 @@ function Experiences() {
     >
     <Card className="h-[432px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl dark:bg-zinc-900 dark:border-zinc-800">
       <div className="z-10 mb-4 shrink-0">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700">
+        <div className="inline-flex z-50 items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
@@ -58,7 +58,7 @@ function Experiences() {
           {duplicatedExperiences.map((exp, index) => (
             <div 
               key={index} 
-              className="p-4 bg-zinc-50 border border-zinc-100 rounded-2xl text-sm font-medium text-zinc-700 leading-relaxed shadow-sm dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-300"
+              className="p-4 z-50 hover:scale-[1.01] hover:rounded-2xl bg-zinc-50 border border-zinc-100 rounded-2xl text-sm font-medium text-zinc-700 leading-relaxed shadow-sm dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-300 transition duration-200"
             >
               {exp}
             </div>
