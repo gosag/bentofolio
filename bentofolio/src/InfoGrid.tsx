@@ -28,7 +28,7 @@ function MySkills() {
       transition={{ delay: 0.2, duration: 0.5 }}
       className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
-      hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out dark:bg-zinc-900 dark:border-zinc-800"
+      hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out dark:bg-[radial-gradient(ellipse,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-900 "
     >
       <h3 className="mb-6 text-xs font-bold tracking-widest text-neutral-400 uppercase dark:text-zinc-50">
         My Arsenal
@@ -87,11 +87,20 @@ function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
 const HireMeForCard = () => {
   return (
     <motion.div
-      className="flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200 dark:border-zinc-800"
+      className="relative flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200 dark:border-zinc-800"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
+      <div className="absolute top-1/2 left-[65%] -translate-x-1/2 -translate-y-1/2
+        w-80 h-80
+        text-sm font-bold
+        text-zinc-900 dark:text-zinc-50
+        bg-[radial-gradient(circle,_rgba(255,255,255,0.08)_0%,_transparent_70%)]
+        pointer-events-none z-10
+        transition-opacity duration-300
+        rounded-lg px-3 py-1">
+      </div>
       {/* Left Section: Hire Me For Tags */}
       <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl  hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900 dark:border dark:border-zinc-800 ">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1 dark:bg-zinc-700 dark:text-zinc-50">
