@@ -71,7 +71,7 @@ function SocialBar() {
       </Card>
 
       {/* Main Social Links Bar */}
-      <div className="flex flex-row flex-1 lg:flex-col lg:w-20 justify-around items-center p-2 lg:py-4 gap-4 bg-white/80 backdrop-blur-sm border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 rounded-2xl shadow-sm">
+      <div className="flex flex-row flex-1 lg:flex-col lg:w-20 justify-around items-center p-2 lg:py-4 gap-4 bg-white/80 backdrop-blur-sm border border-zinc-200 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border-zinc-800 rounded-2xl shadow-sm">
         {socials.map((social, index) => (
           <motion.a
             key={index}
@@ -84,7 +84,7 @@ function SocialBar() {
             className={`relative group p-2 rounded-xl bg-zinc-100 border border-zinc-200 text-zinc-500 transition-all duration-200 ${social.color} hover:bg-white hover:shadow-sm hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-100`}
           >
             <social.icon size={20} strokeWidth={2.25} />
-            <span className="absolute hidden group-hover:block lg:hidden bottom-full mb-3 px-2 py-1 bg-zinc-800 text-white text-[10px] rounded pointer-events-none whitespace-nowrap z-50">
+            <span className="absolute hidden group-hover:block lg:hidden bottom-full mb-3 px-2 py-1 bg-zinc-800 text-white text-[10px] rounded pointer-events-none whitespace-nowrap z-50 ">
               {social.label}
             </span>
           </motion.a>

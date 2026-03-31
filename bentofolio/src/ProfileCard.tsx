@@ -58,7 +58,8 @@ function GithubDisplay(){
           className="flex flex-col gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl  transition duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          whileHover={{scale:1.02}}
+          transition={{  duration: 0.5 }}
         >
         <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
             <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">650+ contributions in the last year</p>
