@@ -14,17 +14,17 @@ const IdentityCard = () => {
   }
   return (
     <motion.div
-      className="max-full group bg-zinc-100 dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
+      className="max-full bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] group  dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
-      <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border-zinc-900">
+      <Card className="bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] border-none shadow-lg rounded-3xl p-6 dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.800),_theme(colors.zinc.900),_theme(colors.black))] dark:border-zinc-900">
         <div className="flex flex-row items-center gap-4 group" >
           <img
             src="/profile.jpg"
             alt="Profile"
-            className="rounded-full w-20 h-20 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="rounded-full w-20 h-20 object-cover group-hover:scale-105 transition-transform duration-300 z-50 dark:z-40"
           />
           <div>
             <p className="text-md w-fit px-2 bg-zinc-300 text-[#71717A] rounded-lg dark:bg-zinc-800 dark:text-zinc-300">
@@ -55,14 +55,14 @@ const IdentityCard = () => {
 function GithubDisplay(){
     return(
         <motion.div
-          className="flex flex-col gap-3  shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl  transition duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
+          className="flex flex-col gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl  transition duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-        <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-white dark:bg-zinc-900 dark:border dark:border-zinc-800">
+        <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
             <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">600+ contributions in the last year</p>
-           <img src="/github.png" alt="Github" className="w-[391px] mb-4"/>
+           <img src="/github.png" alt="Github" className="w-[391px] mb-4 z-50"/>
         </div>
         </motion.div>
     )
@@ -75,7 +75,7 @@ function ProjectsCard() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }} 
-    className="w-full h-[230px] rounded-3xl border border-zinc-200 bg-white backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
+    className="w-full  rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
       <div className="flex items-center gap-3 mb-4 shrink-0">
         <span className="bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,18 +89,18 @@ function ProjectsCard() {
         </h1>
       </div>
 
-      <div className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] h-full">
+      <div className="flex flex-col sm:flex-row gap-4 overflow-x-auto pb-2 snap-x snap-mandatory  h-full">
         <a 
           href="https://echostudy.gosagirma.me" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-600 via-zinc-900 to-black dark:border dark:border-zinc-800"
+          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.200))] dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
               EchoStudy
             </h2>
-            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
+            <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
                 AI-powered study system with summarization, quizzes, and spaced repetition . . .            
             </p>
           </div>
@@ -119,7 +119,7 @@ function ProjectsCard() {
           href="https://movie-app-theta-steel.vercel.app" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
+          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900 mb-1 dark:text-zinc-50">

@@ -28,9 +28,12 @@ function MySkills() {
       transition={{ delay: 0.2, duration: 0.5 }}
       className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
-      hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1  transition-all duration-300 ease-out dark:bg-[radial-gradient(ellipse,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-900 "
+      hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1  transition-all duration-300 ease-out 
+      bg-[radial-gradient(ellipse_at_center,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))]
+       dark:bg-[radial-gradient(ellipse,_theme(colors.zinc.800),_theme(colors.zinc.900),_theme(colors.black))]
+      dark:border dark:border-zinc-900 "
     >
-      <h3 className="mb-6 text-xs font-bold tracking-widest text-neutral-400 uppercase dark:text-zinc-50">
+      <h3 className="mb-6 text-xs font-bold tracking-widest text-zinc-700 uppercase dark:text-zinc-50">
         My Arsenal
       </h3>
 
@@ -96,7 +99,8 @@ const HireMeForCard = () => {
         w-80 h-80
         text-sm font-bold
         text-zinc-900 dark:text-zinc-50
-        bg-[radial-gradient(circle,_rgba(255,255,255,0.08)_0%,_transparent_70%)]
+        bg-[radial-gradient(circle,_rgba(82,177,255,0.1)_0%,_transparent_70%)]
+        dark:bg-[radial-gradient(circle,_rgba(255,255,255,0.08)_0%,_transparent_70%)]
         pointer-events-none z-10
         transition-opacity duration-300
         rounded-lg px-3 py-1">
