@@ -14,17 +14,17 @@ const IdentityCard = () => {
   }
   return (
     <motion.div
-      className="max-full bg-zinc-100 dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950"
+      className="max-full group bg-zinc-100 dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       <Card className="bg-white shadow-lg rounded-3xl p-6 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border-zinc-900">
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row items-center gap-4 group" >
           <img
             src="/profile.jpg"
             alt="Profile"
-            className="rounded-full w-20 h-20 object-cover"
+            className="rounded-full w-20 h-20 object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div>
             <p className="text-md w-fit px-2 bg-zinc-300 text-[#71717A] rounded-lg dark:bg-zinc-800 dark:text-zinc-300">
@@ -55,7 +55,7 @@ const IdentityCard = () => {
 function GithubDisplay(){
     return(
         <motion.div
-          className="flex flex-col gap-3 shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl transition-shadow duration-300 dark:dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800"
+          className="flex flex-col gap-3  shadow-xl p-6 bg-zinc-100 rounded-3xl hover:shadow-2xl  transition duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -101,7 +101,7 @@ function ProjectsCard() {
               EchoStudy
             </h2>
             <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-              An AI-powered study hub designed to optimize learning and manage educational resources efficiently.
+                AI-powered study system with summarization, quizzes, and spaced repetition . . .            
             </p>
           </div>
           

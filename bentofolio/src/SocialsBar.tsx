@@ -10,12 +10,12 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 const socials = [
-  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600 " },
-  { icon: Mail, href: "mailto:gosagirma441@gmail.com", label: "Email", color: "hover:text-red-500" },
-  { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black" },
-  { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900" },
-  { icon: Send, href: "https://t.me/gosa_1", label: "Telegram", color: "hover:text-sky-500" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500 hidden sm:block" },
+  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600 dark:hover:text-blue-600 " },
+  { icon: Mail, href: "mailto:gosagirma441@gmail.com", label: "Email", color: "hover:text-red-500 dark:hover:text-red-500" },
+  { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black dark:hover:text-white" },
+  { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900 dark:hover:text-zinc-300" },
+  { icon: Send, href: "https://t.me/gosa_1", label: "Telegram", color: "hover:text-sky-500 dark:hover:text-sky-400" },
+  { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500 hidden sm:block dark:hover:text-green-400" },
   
 ];
 
@@ -41,7 +41,7 @@ function SocialBar() {
       if (savedTheme === "dark" || savedTheme === "light") return savedTheme;
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
     }
-    return "light";
+    return "dark"; // default to dark if no preference
   });
   useEffect(() => { 
     const root = window.document.documentElement;
@@ -63,6 +63,7 @@ function SocialBar() {
           animate={{ rotate: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
           width="36" height="36" viewBox="0 0 40 40" fill="none" 
+          className="text-zinc-500 dark:text-zinc-400"
         >
           <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" fill="#f4f4f5"/>
           <path d="M20 30C25.5228 30 30 25.5228 30 20C30 19.5373 29.3065 19.4608 29.0672 19.8568C27.9289 21.7406 25.8615 23 23.5 23C19.9101 23 17 20.0899 17 16.5C17 14.1385 18.2594 12.0711 20.1432 10.9328C20.5392 10.6935 20.4627 10 20 10C14.4772 10 10 14.4772 10 20C10 25.5228 14.4772 30 20 30Z" fill="#71717a"/>

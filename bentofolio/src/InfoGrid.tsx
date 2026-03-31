@@ -28,7 +28,7 @@ function MySkills() {
       transition={{ delay: 0.2, duration: 0.5 }}
       className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
-      hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out dark:bg-[radial-gradient(ellipse,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-900 "
+      hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1  transition-all duration-300 ease-out dark:bg-[radial-gradient(ellipse,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-900 "
     >
       <h3 className="mb-6 text-xs font-bold tracking-widest text-neutral-400 uppercase dark:text-zinc-50">
         My Arsenal
