@@ -43,7 +43,7 @@ function SocialBar() {
       if (savedTheme === "dark" || savedTheme === "light") return savedTheme;
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
     }
-    return "dark"; // default to dark if no preference
+    return "dark";
   });
   useEffect(() => { 
     const root = window.document.documentElement;

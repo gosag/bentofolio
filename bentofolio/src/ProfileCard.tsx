@@ -163,7 +163,7 @@ export default function ProfileCard() {
           initial="hidden"
           animate="visible"
         >
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3 mb-2">
             <div className="flex flex-col gap-8 min-w-[337px]">
             <IdentityCard />
             <GithubDisplay />
