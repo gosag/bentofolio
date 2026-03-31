@@ -55,10 +55,10 @@ const IdentityCard = () => {
 function GithubDisplay(){
     return(
         <motion.div
-          className="flex flex-col gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl  transition duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
+          className="flex flex-col gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          whileHover={{scale:1.02}}
+          whileHover={{scale:1.05}}
           transition={{  duration: 0.5 }}
         >
         <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
@@ -95,7 +95,8 @@ function ProjectsCard() {
           href="https://echostudy.gosagirma.me" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.200))] dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
+          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
+          dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
@@ -120,7 +121,7 @@ function ProjectsCard() {
           href="https://movie-app-theta-steel.vercel.app" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
+          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border  border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900 mb-1 dark:text-zinc-50">

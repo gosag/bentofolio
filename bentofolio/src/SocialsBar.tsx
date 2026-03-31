@@ -6,7 +6,9 @@ import {
   Send,
   MessageCircle,
   X,
-  Mail
+  Mail,
+  Sun,
+  Moon
 } from "lucide-react";
 import { useEffect, useState } from "react";
 const socials = [
@@ -59,15 +61,13 @@ function SocialBar() {
     >
       {/* The Anchor/Status Card */}
       <Card onClick={toggleTheme} className="w-12 h-12 lg:w-20 lg:h-20 shrink-0 rounded-2xl flex justify-center items-center border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-md transition-shadow cursor-default dark:bg-zinc-900 dark:border-zinc-800 ">
-        <motion.svg 
-          animate={{ rotate: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-          width="36" height="36" viewBox="0 0 40 40" fill="none" 
-          className="text-zinc-500 dark:text-zinc-400"
-        >
-          <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" fill="#f4f4f5"/>
-          <path d="M20 30C25.5228 30 30 25.5228 30 20C30 19.5373 29.3065 19.4608 29.0672 19.8568C27.9289 21.7406 25.8615 23 23.5 23C19.9101 23 17 20.0899 17 16.5C17 14.1385 18.2594 12.0711 20.1432 10.9328C20.5392 10.6935 20.4627 10 20 10C14.4772 10 10 14.4772 10 20C10 25.5228 14.4772 30 20 30Z" fill="#71717a"/>
-        </motion.svg>
+
+        <motion.div 
+        animate={{ rotate: theme === "light" ? 0 : 360 }}
+        transition={{duration:0.5}}
+        className="z-50"
+        >{theme !== "light" ? <Sun size={26} strokeWidth={2.25} className="text-yellow-500 z-50" /> : <Moon size={28} strokeWidth={2.25} className="text-gray-400 z-50" />}
+       </motion.div>
       </Card>
 
       {/* Main Social Links Bar */}
