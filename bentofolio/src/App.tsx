@@ -30,7 +30,7 @@ export default function App() {
       {/* spotlight */}
       <div
         ref={spotlightRef}
-        className={`pointer-events-none absolute inset-0 z-50 transition-opacity duration-300 ease-in-out ${
+        className={`pointer-events-none absolute inset-0 z-40 transition-opacity duration-300 ease-in-out ${
           isHovered ? "opacity-100" : "opacity-0"
         }`}
       />

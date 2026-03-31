@@ -58,10 +58,9 @@ function GithubDisplay(){
           className="flex flex-col gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          whileHover={{scale:1.05}}
           transition={{  duration: 0.5 }}
         >
-        <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
+        <div className="w-full z-50 border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
             <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">650+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4 z-50 rounded-md"/>
         </div>
@@ -107,12 +106,12 @@ function ProjectsCard() {
             </p>
           </div>
           
-          <div className="flex items-end justify-between z-10 mt-2">
+          <div className="flex items-end justify-between z-50 mt-2">
             <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
               <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
-            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
+            <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
               <ArrowUpRight size={16} strokeWidth={2.5} />
             </div>
           </div>
@@ -137,7 +136,7 @@ function ProjectsCard() {
               <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
-            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ark:bg-zinc-700 dark:text-zinc-200 ">
+            <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ark:bg-zinc-700 dark:text-zinc-200 ">
               <ArrowUpRight size={16} strokeWidth={2.5} />
             </div>
           </div>

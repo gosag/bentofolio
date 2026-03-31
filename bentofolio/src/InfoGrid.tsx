@@ -26,13 +26,12 @@ function MySkills() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      whileHover={{ scale: 1.01 }}
       className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
       hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1  transition-all duration-300 ease-out 
       bg-[radial-gradient(ellipse_at_center,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))]
       dark:bg-[radial-gradient(ellipse,_theme(colors.zinc.800),_theme(colors.zinc.900),_theme(colors.black))]
-      dark:border dark:border-zinc-900 dark:hover:border-zinc-800 "
+      dark:border dark:border-zinc-900 "
     >
       <h3 className="mb-6 text-xs font-bold tracking-widest text-zinc-700 uppercase dark:text-zinc-50">
         My Arsenal
@@ -76,7 +75,7 @@ function MySkills() {
 
 function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-neutral-50 border border-neutral-100 rounded-2xl shadow-sm min-w-max dark:bg-zinc-800 dark:border-zinc-900">
+    <div className="flex items-center gap-2 z-50 px-4 py-2 bg-neutral-50 border border-neutral-100 rounded-2xl shadow-sm min-w-max dark:bg-zinc-800 dark:border-zinc-900">
       <img
         src={skill.icon}
         alt={`${skill.name} logo`}
