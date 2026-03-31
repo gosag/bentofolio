@@ -12,6 +12,7 @@ const IdentityCard = () => {
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
   }
+ 
   return (
     <motion.div
       className="max-full bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] group  dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
@@ -147,8 +148,21 @@ function ProjectsCard() {
   );
 }
 export default function ProfileCard() {
+   const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
     return(
-        <div className="flex flex-col gap-3 ">
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3">
             <div className="flex flex-col gap-8 min-w-[337px]">
             <IdentityCard />
@@ -157,6 +171,6 @@ export default function ProfileCard() {
             <InfoGrid/>
         </div>
         <ProjectsCard/>
-        </div>
+        </motion.div>
     )
 }

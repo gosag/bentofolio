@@ -2,7 +2,7 @@ import ProfileCard from "./ProfileCard";
 import DetailsPanel from "./DetailsPanel";
 import SocialBar from "./SocialsBar";
 import { useRef, useState } from "react";
-
+import { motion } from "framer-motion";
 export default function App() {
   const spotlightRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -19,9 +19,20 @@ export default function App() {
       transparent 120px
     )`;
   };
-
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
   return (
-    <div 
+    <motion.div 
+      variants={staggerContainer}
+      initial="hidden"
+      animate="visible"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -37,7 +48,7 @@ export default function App() {
       <ProfileCard />
       <DetailsPanel />
       <SocialBar />
-    </div>
+    </motion.div>
   );
 }
 
