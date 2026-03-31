@@ -43,7 +43,7 @@ const IdentityCard = () => {
         </CardContent>
 
         <CardFooter className="border-t-0 flex items-center justify-center p-0">
-          <div onClick={handleCopyEmail} className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-100">
+          <div onClick={handleCopyEmail} className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer hover:scale-[1.02] active:scale-[0.98] dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-100 transition duration-300">
             <Copy size={20} />
             <p className="ml-2">{isCopied ? "Email Copied!" : email}</p>
           </div>
@@ -61,8 +61,8 @@ function GithubDisplay(){
           transition={{ delay: 0.4, duration: 0.5 }}
         >
         <div className="w-full border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
-            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">600+ contributions in the last year</p>
-           <img src="/github.png" alt="Github" className="w-[391px] mb-4 z-50"/>
+            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">650+ contributions in the last year</p>
+           <img src="/github.png" alt="Github" className="w-[391px] mb-4 z-50 rounded-md"/>
         </div>
         </motion.div>
     )
@@ -107,7 +107,7 @@ function ProjectsCard() {
           
           <div className="flex items-end justify-between z-10 mt-2">
             <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" />
+              <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
             <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
@@ -132,10 +132,10 @@ function ProjectsCard() {
           
           <div className="flex items-end justify-between z-10 mt-2">
             <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" />
+              <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
-            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600 ">
+            <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ark:bg-zinc-700 dark:text-zinc-200 ">
               <ArrowUpRight size={16} strokeWidth={2.5} />
             </div>
           </div>

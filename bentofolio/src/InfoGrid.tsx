@@ -26,6 +26,7 @@ function MySkills() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
+      whileHover={{ scale: 1.02 }}
       className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
       hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1  transition-all duration-300 ease-out 
@@ -139,9 +140,8 @@ const HireMeForCard = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          
         >
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-900">
             <CardHeader>
               <p className="bg-slate-200 text-sm w-[100%] rounded-xl px-1 dark:bg-zinc-800 dark:text-zinc-100"> 🚀Deployed Apps</p>
             </CardHeader>
@@ -149,7 +149,7 @@ const HireMeForCard = () => {
               <h1 className="text-5xl font-bold dark:text-zinc-50">3+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-900">
             <CardHeader>
               <p className="bg-slate-200 text-sm w-[100%] rounded-xl px-1 dark:bg-zinc-800 dark:text-zinc-100"> 😊Cool Projects</p>
             </CardHeader>
@@ -157,7 +157,7 @@ const HireMeForCard = () => {
               <h1 className="text-5xl font-bold dark:text-zinc-50">10+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-900">
             <CardHeader>
               <p className="bg-slate-200 text-sm w-[100%] rounded-xl px-1 dark:bg-zinc-800 dark:text-zinc-100"> 🕒Years Expertise</p>
             </CardHeader>

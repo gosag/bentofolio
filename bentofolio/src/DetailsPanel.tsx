@@ -75,7 +75,7 @@ function Experiences() {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      transition={{ duration: 0.4, ease: "easeOut", staggerChildren: 0.1 , when:"beforeChildren" }}
       className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 dark:bg-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto dark:border-zinc-800"
     >
       <div className="flex justify-between items-center p-5 border-b border-transparent bg-white/80 sticky top-0 dark:bg-zinc-900">
@@ -96,7 +96,6 @@ function Experiences() {
           className="p-2 rounded-full text-slate-400 hover:text-blue-600 transition-colors cursor-pointer "
           title="Download CV"
         >
-        
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>

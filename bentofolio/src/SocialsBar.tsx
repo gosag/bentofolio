@@ -10,12 +10,12 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 const socials = [
-  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600 dark:hover:text-blue-600 " },
-  { icon: Mail, href: "mailto:gosagirma441@gmail.com", label: "Email", color: "hover:text-red-500 dark:hover:text-red-500" },
-  { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black dark:hover:text-white" },
-  { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900 dark:hover:text-zinc-300" },
-  { icon: Send, href: "https://t.me/gosa_1", label: "Telegram", color: "hover:text-sky-500 dark:hover:text-sky-400" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500 hidden sm:block dark:hover:text-green-400" },
+  { icon: Linkedin, href: "https://linkedin.com/in/gosa-girma-b7b256326", label: "LinkedIn", color: "hover:text-blue-600 dark:hover:text-blue-600 z-50" },
+  { icon: Mail, href: "mailto:gosagirma441@gmail.com", label: "Email", color: "hover:text-red-500 dark:hover:text-red-500 z-50" },
+  { icon: X, href: "https://x.com/GosaGirma110026", label: "X", color: "hover:text-black dark:hover:text-white z-50" },
+  { icon: Github, href: "https://github.com/gosag", label: "Github", color: "hover:text-zinc-900 dark:hover:text-zinc-300 z-50" },
+  { icon: Send, href: "https://t.me/gosa_1", label: "Telegram", color: "hover:text-sky-500 dark:hover:text-sky-400 z-50" },
+  { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500 hidden sm:block dark:hover:text-green-400 z-50" }
   
 ];
 
