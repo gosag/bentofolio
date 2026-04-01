@@ -21,8 +21,9 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
+      className="min-h-[45%]"
     >
-    <Card className="h-[432px] w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl dark:bg-zinc-900 dark:border-zinc-800">
+    <Card className="h-[435px]  w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl dark:bg-zinc-900 dark:border-zinc-800">
       <div className="z-10 mb-4 shrink-0">
         <div className="inline-flex z-50 items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -76,7 +77,7 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut", staggerChildren: 0.1 , when:"beforeChildren" }}
-      className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 dark:bg-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto dark:border-zinc-800"
+      className="group min-h-[50%] relative flex flex-col bg-white rounded-3xl border border-slate-200 dark:bg-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto dark:border-zinc-800"
     >
       <div className="flex justify-between items-center p-5 border-b border-transparent bg-white/80 sticky top-0 dark:bg-zinc-900">
         <div className="flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide dark:bg-zinc-700 dark:text-zinc-100">
@@ -169,7 +170,7 @@ function Experiences() {
 }
 function DetailsPanel() {
     return(
-        <div className="min-w-[135px] h-max flex flex-col sm:flex-row lg:flex-col gap-4 mt-0 sm:mt-16 md:mt-0">
+        <div className="min-w-[135px] min-h-screen flex flex-col sm:flex-row lg:flex-col gap-4 mt-0 sm:mt-16 md:mt-0">
             <Experiences /> 
             <CVBentoCard/>  
         </div>

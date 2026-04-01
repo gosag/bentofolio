@@ -135,7 +135,7 @@ const HireMeForCard = () => {
         </div>
       </Card>
         <motion.div
-          className="max-w-[36%] h-full space-y-3 flex flex-col justify-evenly "
+          className="max-w-[36%] h-full space-y-3 flex flex-col justify-evenly items-center "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
