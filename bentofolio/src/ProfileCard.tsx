@@ -76,7 +76,7 @@ function ProjectsCard() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }} 
-     className="w-full min-h-[25%]  rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
+     className="w-full min-h-[25%]  my-3   rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col justify-center p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
       <div className="flex items-center gap-3 mb-4 shrink-0">
         <span className="bg-zinc-100  text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,12 +90,12 @@ function ProjectsCard() {
         </h1>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 overflow-x-auto pb-2 snap-x snap-mandatory  h-full">
+      <div className="flex flex-col sm:flex-row  gap-4 overflow-x-auto pb-2 snap-x snap-mandatory  h-full">
         <a 
           href="https://echostudy.gosagirma.me" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
+          className="group min-h-fit md:h-fit   relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
           dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
         >
           <div className="z-10">
@@ -108,7 +108,7 @@ function ProjectsCard() {
           </div>
           
           <div className="flex items-end justify-between z-50 mt-2">
-            <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
+            <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
               <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
@@ -133,7 +133,7 @@ function ProjectsCard() {
           </div>
           
           <div className="flex items-end justify-between z-10 mt-2">
-            <div className="w-16 h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
+            <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
               <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
@@ -162,9 +162,9 @@ export default function ProfileCard() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="min-h-screen "
+          className=" md:min-h-fit lg:min-h-screen"
         >
-            <div className=" min-h-[73%] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3 mb-2">
+            <div className=" md:min-h-[71%] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3">
                 <div className="flex h-full flex-col gap-8 min-w-[337px]">
                   <IdentityCard />
                   <GithubDisplay />

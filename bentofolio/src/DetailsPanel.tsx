@@ -169,7 +169,7 @@ function Experiences() {
 }
 function DetailsPanel() {
     return(
-        <div className="min-w-[135px] h-max flex flex-col sm:flex-row lg:flex-col gap-4">
+        <div className="min-w-[135px] h-max flex flex-col sm:flex-row lg:flex-col gap-4 mt-0 sm:mt-16 md:mt-0">
             <Experiences /> 
             <CVBentoCard/>  
         </div>
