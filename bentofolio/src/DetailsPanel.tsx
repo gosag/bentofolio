@@ -21,9 +21,9 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      className="min-h-[45%]"
+      className="min-h-[45%] border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 shadow-sm rounded-3xl"
     >
-    <Card className="h-[435px]  w-full p-6 flex flex-col relative overflow-hidden bg-white border border-zinc-200 shadow-sm rounded-3xl dark:bg-zinc-900 dark:border-zinc-800">
+    <Card className="h-[435px]   w-full p-6 flex flex-col relative border border-transparent overflow-hidden bg-transparent">
       <div className="z-10 mb-4 shrink-0">
         <div className="inline-flex z-50 items-center gap-1.5 px-2.5 py-1 mb-3 rounded-full bg-zinc-100 text-zinc-600 text-xs font-semibold border border-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -38,7 +38,7 @@ function Experiences() {
 
       {/* Scrolling Area with Gradient Fade Mask */}
       <div 
-        className="relative flex-1 overflow-hidden"
+        className="relative flex-1  overflow-hidden"
         style={{
           maskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
           WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)"
@@ -170,7 +170,7 @@ function Experiences() {
 }
 function DetailsPanel() {
     return(
-        <div className="min-w-[135px] min-h-screen flex flex-col sm:flex-row lg:flex-col gap-4 mt-0 sm:mt-16 md:mt-0">
+        <div className="min-w-[135px] min-h-screen sm:min-h-fit flex flex-col sm:flex-row lg:flex-col gap-4 mt-0 sm:mt-16 md:mt-0">
             <Experiences /> 
             <CVBentoCard/>  
         </div>
