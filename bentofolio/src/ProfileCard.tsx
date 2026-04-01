@@ -28,16 +28,16 @@ const IdentityCard = () => {
             className="rounded-full w-20 h-20 object-cover group-hover:scale-105 transition-transform duration-300 z-50 dark:z-40"
           />
           <div>
-            <p className="text-md w-fit px-2 bg-zinc-300 text-[#71717A] rounded-lg dark:bg-zinc-800 dark:text-zinc-300">
+            <p className="text-sm font-medium w-fit px-3 py-0.5 bg-orange-100 text-orange-800 rounded-lg dark:bg-orange-900/30 dark:text-orange-200">
               ✌️ Welcome
             </p>
             <h1 className="mt-4 text-2xl font-semibold dark:text-zinc-50">Gosa Girma</h1>
-            <h4 className="text-lg dark:text-zinc-300">I'm a Full stack Web Developer</h4>
+            <h4 className="text-lg text-zinc-700 dark:text-zinc-300">I'm a Full stack Web Developer</h4>
           </div>
         </div>
 
         <CardContent>
-          <p className="text-[#71717A] dark:text-zinc-400">
+          <p className="text-zinc-600 dark:text-zinc-400">
             I turn ideas into production-ready web applications, managing the
             entire journey from concept to deployment and iteration.
           </p>

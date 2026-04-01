@@ -1,4 +1,4 @@
-import { Briefcase } from "lucide-react";
+import { Briefcase, Check } from "lucide-react";
 import {Card, CardContent, CardHeader} from "./components/ui/card"
 import {motion} from "framer-motion"
 const row1 = [
@@ -75,13 +75,13 @@ function MySkills() {
 
 function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
   return (
-    <div className="flex items-center gap-2 z-50 px-4 py-2 bg-neutral-50 border border-neutral-100 rounded-2xl shadow-sm min-w-max dark:bg-zinc-800 dark:border-zinc-900">
+    <div className="flex items-center gap-2 z-50 px-4 py-2 bg-neutral-50 border border-neutral-100 rounded-2xl shadow-sm min-w-max dark:bg-zinc-800 dark:border-white/5">
       <img
         src={skill.icon}
         alt={`${skill.name} logo`}
         className="w-6 h-6 object-contain"
       />
-      <span className="text-sm font-medium text-neutral-600 dark:text-zinc-50">
+      <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
         {skill.name}
       </span>
     </div>
@@ -106,8 +106,8 @@ const HireMeForCard = () => {
         rounded-lg px-3 py-1">
       </div>
       {/* Left Section: Hire Me For Tags */}
-      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl  hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900 dark:border dark:border-zinc-800 ">
-        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1 dark:bg-zinc-700 dark:text-zinc-50">
+      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl  hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900 dark:border dark:border-white/5 ">
+        <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1 dark:bg-zinc-800 dark:text-zinc-50">
           <Briefcase size={16} /> Hire me For
         </p>
         <div className="flex flex-wrap pl-0.5 gap-2">
@@ -124,44 +124,45 @@ const HireMeForCard = () => {
           ].map((skill, index) => (
             <motion.span
               key={index}
-              className="p-1 text-sm  rounded-md transition min-w-[100%] sm:w-auto cursor-pointer flex items-center gap-1 hover:text-zinc-950  dark:text-zinc-300 dark:hover:text-zinc-50"
+              className="p-1 text-sm  rounded-md transition min-w-[100%] sm:w-auto cursor-pointer flex items-center gap-1.5 hover:text-zinc-950  dark:text-zinc-300 dark:hover:text-zinc-50"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              {"+"+ skill}
+              <Check size={14} className="text-blue-600 dark:text-blue-400" />
+              {skill}
             </motion.span>
           ))}
         </div>
       </Card>
       <div className="max-w-[36%] h-full flex flex-col justify-evenly">
         <motion.div
-          className="space-y-2"
+          className="space-y-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-900">
-            <CardHeader>
-              <p className="bg-slate-200 text-sm w-[100%] rounded-xl px-1 dark:bg-zinc-800 dark:text-zinc-100"> 🚀Deployed Apps</p>
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-800 dark:border-white/5">
+            <CardHeader className="px-2">
+              <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-2 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🚀Deployed Apps</p>
             </CardHeader>
-            <CardContent>
-              <h1 className="text-5xl font-bold dark:text-zinc-50">3+</h1>
+            <CardContent className="pb-4 pt-0 px-4">
+              <h1 className="text-4xl text-center font-bold dark:text-zinc-50">3+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-900">
-            <CardHeader>
-              <p className="bg-slate-200 text-sm w-[100%] rounded-xl px-1 dark:bg-zinc-800 dark:text-zinc-100"> 😊Cool Projects</p>
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-800 dark:border-white/5">
+            <CardHeader className="px-2">
+              <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-2 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 😊Cool Projects</p>
             </CardHeader>
-            <CardContent>
-              <h1 className="text-5xl font-bold dark:text-zinc-50">10+</h1>
+            <CardContent className="pb-4 pt-0 px-4">
+              <h1 className="text-4xl text-center font-bold dark:text-zinc-50">10+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-900">
-            <CardHeader>
-              <p className="bg-slate-200 text-sm w-[100%] rounded-xl px-1 dark:bg-zinc-800 dark:text-zinc-100"> 🕒Years Expertise</p>
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.05] transition duration-300 dark:bg-zinc-800 dark:border-white/5">
+            <CardHeader className="px-2">
+              <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-2 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🕒Years Expertise</p>
             </CardHeader>
-            <CardContent>
-              <h1 className="text-7xl font-bold dark:text-zinc-50">2+</h1>
+            <CardContent className="pb-4 pt-0 px-4">
+              <h1 className="text-5xl text-center font-bold dark:text-zinc-50">2+</h1>
             </CardContent>
           </Card>
         </motion.div>
