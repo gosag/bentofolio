@@ -26,7 +26,7 @@ function MySkills() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      className="relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl min-h-[185px]
+      className="min-h-[27%] relative flex flex-col justify-center px-4 overflow-hidden bg-white border border-neutral-200 rounded-3xl
       shadow-[0_8px_30px_rgb(0,0,0,0.04)]
       hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1  transition-all duration-300 ease-out 
       bg-[radial-gradient(ellipse_at_center,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))]
@@ -90,7 +90,7 @@ function SkillBadge({ skill }: { skill: { name: string; icon: string } }) {
 const HireMeForCard = () => {
   return (
     <motion.div
-      className="relative flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200 dark:border-zinc-800"
+      className="relative min-h-[67%] flex flex-row justify-evenly lg:justify-between flex-wrap h-fit md:h-[455px] border-zinc-200 dark:border-zinc-800"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -134,9 +134,8 @@ const HireMeForCard = () => {
           ))}
         </div>
       </Card>
-      <div className="max-w-[36%] h-full flex flex-col justify-evenly">
         <motion.div
-          className="space-y-3"
+          className="max-w-[36%] h-full space-y-3 flex flex-col justify-evenly "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -166,7 +165,6 @@ const HireMeForCard = () => {
             </CardContent>
           </Card>
         </motion.div>
-      </div>
     </motion.div>
   );
 };
