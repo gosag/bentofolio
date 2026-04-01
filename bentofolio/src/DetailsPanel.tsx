@@ -77,7 +77,7 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut", staggerChildren: 0.1 , when:"beforeChildren" }}
-      className="group min-h-[50%] relative flex flex-col bg-white rounded-3xl border border-slate-200 dark:bg-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto dark:border-zinc-800"
+      className="group min-h-[48%] pb-3 dark:bg-zinc-900 relative flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 h-[440px] overflow-y-auto dark:border-zinc-800"
     >
       <div className="flex justify-between items-center p-5 border-b border-transparent bg-white/80 sticky top-0 dark:bg-zinc-900">
         <div className="flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide dark:bg-zinc-700 dark:text-zinc-100">
@@ -108,7 +108,7 @@ function Experiences() {
       </div>
 
       <div className="p-6 overflow-y-auto flex-1 custom-scrollbar text-slate-600 dark:bg-zinc-900 dark:text-zinc-200">
-        
+
         <section className="mb-6">
           <h3 className="text-slate-900 font-semibold flex items-center gap-2 mb-2 text-lg dark:text-zinc-50 ">
             <span>🧑‍💻</span> Product-Minded Engineer
