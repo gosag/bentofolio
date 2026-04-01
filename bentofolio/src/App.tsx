@@ -36,7 +36,7 @@ const staggerContainer = {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className=" relative overflow-hidden min-h-screen grid grid-cols-1 lg:grid-cols-[8fr_4fr_1fr] gap-2 p-3 dark:bg-black"
+      className=" relative overflow-hidden min-h-screen grid grid-cols-1 lg:grid-cols-[8fr_4fr_1fr] gap-3 p-3 dark:bg-black"
     >
       {/* spotlight */}
       <div

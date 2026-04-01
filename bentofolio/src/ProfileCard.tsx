@@ -15,7 +15,7 @@ const IdentityCard = () => {
  
   return (
     <motion.div
-      className="min-h-[50%] flex justify-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] group  dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
+      className="min-h-[55%] flex justify-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] group  dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -56,7 +56,7 @@ const IdentityCard = () => {
 function GithubDisplay(){
     return(
         <motion.div
-          className="flex min-h-[25%] flex-col items-center justify-center gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
+          className="flex min-h-[37%] flex-col items-center justify-center gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{  duration: 0.5 }}
@@ -76,7 +76,7 @@ function ProjectsCard() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }} 
-     className="w-full min-h-[25%]  my-3   rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col justify-center p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
+     className="w-full min-h-[25%] my-3 rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col justify-center p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
       <div className="flex items-center gap-3 mb-4 shrink-0">
         <span className="bg-zinc-100  text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
