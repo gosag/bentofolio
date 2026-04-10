@@ -128,7 +128,7 @@ function ProjectsCard() {
               Movie App
             </h2>
             <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200">
-              A responsive cinematic explorer built with React, leveraging the IMDB API for real-time data fetching.
+              A responsive cinematic explorer built with React, leveraging the TMDB API for real-time data fetching.
             </p>
           </div>
           
