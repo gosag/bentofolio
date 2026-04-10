@@ -118,7 +118,7 @@ function ProjectsCard() {
           </div>
         </a>
         <a 
-          href="https://movie-app-theta-steel.vercel.app" 
+          href="https://movies.gosagirma.me" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border  border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
