@@ -90,7 +90,7 @@ function Experiences() {
           </svg>
           Curriculum Vitae
         </div>
-        <a href="/resume.pdf" download>
+        <a href="/Gosa_Girma_Resume.pdf" download>
         <motion.button 
           whileHover={{ scale: 1.05, backgroundColor: "#f1f5f9" }}
           whileTap={{ scale: 0.95 }}
