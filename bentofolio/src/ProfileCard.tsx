@@ -62,7 +62,7 @@ function GithubDisplay(){
           transition={{  duration: 0.5 }}
         >
         <div className="w-full z-50 border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
-            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">650+ contributions in the last year</p>
+            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">700+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4 z-50 rounded-md"/>
         </div>
         </motion.div>
