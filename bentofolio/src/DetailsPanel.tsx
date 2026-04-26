@@ -36,9 +36,7 @@ function Experiences() {
               </svg>
               Experience
             </div>
-            <h1 className="text-zinc-900 text-lg font-bold leading-snug tracking-tight dark:text-zinc-50">
-              Career Milestones
-            </h1>
+            
           </div>
           <a href="/Gosa_Girma_Resume.pdf" download className="relative z-50">
             <motion.button 
