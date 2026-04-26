@@ -17,7 +17,7 @@ const IdentityCard = () => {
  
   return (
     <motion.div
-      className="min-h-[57%] sm:min-h-[50%] flex justify-center" 
+      className="min-h-[47%] md:min-h-[62%] flex justify-center" 
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
@@ -104,7 +104,7 @@ const IdentityCard = () => {
 function GithubDisplay(){
     return(
         <motion.div
-          className="flex min-h-[30%] sm:min-h-[40%]  flex-col items-center justify-center gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
+          className="flex  p-4 min-h-[33%] flex-col items-center justify-center gap-3  shadow-xl px-3 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{  duration: 0.5 }}
