@@ -17,7 +17,7 @@ const IdentityCard = () => {
  
   return (
     <motion.div
-      className="min-h-[50%] flex justify-center" 
+      className="min-h-[60%] sm:min-h-[50%] flex justify-center" 
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
