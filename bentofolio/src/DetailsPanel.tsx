@@ -1,7 +1,5 @@
 import { Card } from "./components/ui/card";
 import { motion } from "framer-motion";
-
-const today = new Date();
 const experienceData = [
   {
     id: 1,

@@ -1,8 +1,10 @@
 import {Card,CardContent,CardFooter} from "./components/ui/card";
-import { Copy } from "lucide-react";
+import { Copy, MailCheck, Sparkles } from "lucide-react";
 import InfoGrid from "./InfoGrid";
 import {motion} from "framer-motion"
 import { useState } from "react";
+import Tilt from 'react-parallax-tilt';
+
 const IdentityCard = () => {
   const email="gosagirma441@gmail.com"
   const [isCopied, setIsCopied] = useState(false);
@@ -15,48 +17,94 @@ const IdentityCard = () => {
  
   return (
     <motion.div
-      className="min-h-[55%] flex justify-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] group  dark:bg-zinc-800 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950" 
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2, duration: 0.5 }}
+      className="min-h-[50%] flex justify-center" 
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
     >
-      <Card className="bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] border-none shadow-lg rounded-3xl p-6 dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.800),_theme(colors.zinc.900),_theme(colors.black))] dark:border-zinc-900">
-        <div className="flex flex-row items-center justify-center gap-4 group" >
-          <img
-            src="/profile.jpg"
-            alt="Profile"
-            className="rounded-full w-20 h-20 object-cover group-hover:scale-105 transition-transform duration-300 z-50 dark:z-40"
-          />
-          <div>
-            <p className="text-sm font-medium w-fit px-3 py-0.5 bg-orange-100 text-orange-800 rounded-lg dark:bg-orange-900/30 dark:text-orange-200">
-              ✌️ Welcome
-            </p>
-            <h1 className="mt-4 text-2xl font-semibold dark:text-zinc-50">Gosa Girma</h1>
-            <h4 className="text-lg text-zinc-700 dark:text-zinc-300">AI-focused Full Stack Developer.</h4>
-          </div>
+      <Tilt 
+        tiltMaxAngleX={8} 
+        tiltMaxAngleY={8} 
+        perspective={1000} 
+        scale={1.02} 
+        transitionSpeed={1500}
+        gyroscope={true}
+        className="w-full h-full rounded-3xl"
+      >
+        <div className="h-full w-full relative rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-500">
+          <Card className="h-full bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.50))] border border-zinc-200/80 rounded-3xl p-6 dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.800),_theme(colors.zinc.900),_theme(colors.black))] dark:border-zinc-800/80 flex flex-col justify-between relative overflow-hidden backdrop-blur-sm">
+            
+            {/* Background 3D Glow effect */}
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/20 dark:bg-blue-500/10 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen pointer-events-none transition-all duration-700 group-hover:bg-blue-400/30"></div>
+
+            <div className="flex flex-row items-center justify-between gap-4 group">
+              <div className="relative z-50">
+                <div className="absolute inset-0 bg-blue-500 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                <img
+                  src="/profile.jpg"
+                  alt="Profile"
+                  className="relative rounded-full w-20 h-20 object-cover border-4 border-white/60 dark:border-zinc-800/60 shadow-lg group-hover:scale-[1.03] transition-transform duration-500 z-50 dark:z-40"
+                />
+                <div className="absolute -bottom-1 -right-1 bg-white dark:bg-zinc-800 rounded-full p-1.5 shadow-md border border-zinc-100 dark:border-zinc-700">
+                  <Sparkles className="w-3 h-3 text-blue-500" />
+                </div>
+              </div>
+              
+              <div className="flex flex-col items-end">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-orange-100 to-amber-100 text-orange-800 text-[10px] font-bold rounded-full shadow-sm dark:from-orange-900/40 dark:to-amber-900/40 dark:text-orange-300 border border-orange-200/50 dark:border-orange-800/50 backdrop-blur-sm">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
+                  </span>
+                  Available for work
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-2 mb-1.5">
+              <h1 className="text-2xl font-extrabold tracking-tight text-zinc-900 dark:text-white bg-clip-text">
+                Gosa Girma
+              </h1>
+              <h4 className="text-base font-medium text-blue-600 dark:text-blue-400 mt-0.5">
+                self-taught developer.
+              </h4>
+            </div>
+
+            <CardContent className="p-0 mb-3">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                I turn complex ideas into scalable, production-ready web applications.
+              </p>
+            </CardContent>
+
+            <CardFooter className="border-t-0 p-0 mt-auto ">
+              <button 
+                onClick={handleCopyEmail} 
+                className="group relative w-full flex justify-center items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 py-2.5 px-4 rounded-xl font-bold text-sm cursor-pointer overflow-hidden transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-zinc-900/20 dark:shadow-white/10"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 dark:via-black/10 to-transparent -translate-x-[100%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                {isCopied ? (
+                  <>
+                    <MailCheck size={18} className="text-emerald-400 dark:text-emerald-600" />
+                    <span>Email Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy size={18} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+                    <span>{email}</span>
+                  </>
+                )}
+              </button>
+            </CardFooter>
+          </Card>
         </div>
-
-        <CardContent>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            I turn ideas into production-ready web applications, managing the
-            entire journey from concept to deployment and iteration.
-          </p>
-        </CardContent>
-
-        <CardFooter className="border-t-0 flex items-center justify-center p-0">
-          <div onClick={handleCopyEmail} className="text-center flex justify-center items-center bg-zinc-300 w-full py-2 rounded-md text-[#303038] cursor-pointer hover:scale-[1.02] active:scale-[0.98] dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-100 transition duration-300">
-            <Copy size={20} />
-            <p className="ml-2">{isCopied ? "Email Copied!" : email}</p>
-          </div>
-        </CardFooter>
-      </Card>
+      </Tilt>
     </motion.div>
   );
 };
 function GithubDisplay(){
     return(
         <motion.div
-          className="flex min-h-[37%] flex-col items-center justify-center gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
+          className="flex min-h-[40%] flex-col items-center justify-center gap-3  shadow-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.50),_theme(colors.zinc.100),_theme(colors.blue.50))] rounded-3xl hover:shadow-2xl dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border-zinc-800 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{  duration: 0.5 }}
