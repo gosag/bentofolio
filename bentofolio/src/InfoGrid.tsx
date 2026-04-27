@@ -110,7 +110,7 @@ const HireMeForCard = () => {
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1 dark:bg-zinc-800 dark:text-zinc-50">
           <Briefcase size={16} /> Hire me For
         </p>
-        <div className="flex flex-wrap pl-0.5 gap-2">
+        <div className="flex flex-wrap pl-0.5 gap-2 md:gap-3 lg:gap-1.5">
           {/* Skill Tags */}
           {[
             "Full-Stack MERN + TypeScript",
@@ -148,7 +148,7 @@ const HireMeForCard = () => {
               <h1 className="text-4xl text-center font-bold dark:text-zinc-50">3+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-orange-700/50">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-green-700/50">
             <CardHeader className="px-2">
               <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-4 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 😊Projects</p>
             </CardHeader>
@@ -156,7 +156,7 @@ const HireMeForCard = () => {
               <h1 className="text-4xl text-center font-bold dark:text-zinc-50">10+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-green-700/50">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-orange-700/50">
             <CardHeader className="px-2">
               <p className="bg-slate-200 text-xs w-[100%] rounded-xl py-0.5 px-6 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🕒Years</p>
             </CardHeader>
