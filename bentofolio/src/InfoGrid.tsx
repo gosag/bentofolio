@@ -140,7 +140,7 @@ const HireMeForCard = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(circle_at_top_right,_theme(colors.blue.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-blue-700/50">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:bg-[radial-gradient(circle_at_top_right,_theme(colors.blue.700),_theme(colors.zinc.100),_theme(colors.zinc.50))] hover:dark:bg-[radial-gradient(circle_at_top_right,_theme(colors.blue.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:ring-1 hover:ring-blue-700/50">
             <CardHeader className="px-2">
               <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-3 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🚀Deployed</p>
             </CardHeader>
@@ -148,7 +148,7 @@ const HireMeForCard = () => {
               <h1 className="text-4xl text-center font-bold dark:text-zinc-50">3+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-green-700/50">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.100),_theme(colors.zinc.50))] hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:ring-1 hover:ring-green-700/50">
             <CardHeader className="px-2">
               <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-4 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 😊Projects</p>
             </CardHeader>
@@ -156,7 +156,7 @@ const HireMeForCard = () => {
               <h1 className="text-4xl text-center font-bold dark:text-zinc-50">10+</h1>
             </CardContent>
           </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5 hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:dark:ring-1 hover:dark:ring-orange-700/50">
+          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition duration-200 dark:bg-zinc-800 dark:border-white/5  hover:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.100),_theme(colors.zinc.50))] hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:ring-1 hover:ring-orange-700/50">
             <CardHeader className="px-2">
               <p className="bg-slate-200 text-xs w-[100%] rounded-xl py-0.5 px-6 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🕒Years</p>
             </CardHeader>
