@@ -3,6 +3,8 @@ import DetailsPanel from "./DetailsPanel";
 import SocialBar from "./SocialsBar";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
+
 export default function App() {
   const spotlightRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -48,6 +50,7 @@ const staggerContainer = {
       <ProfileCard />
       <DetailsPanel />
       <SocialBar />
+      <Analytics />
     </motion.div>
   );
 }
