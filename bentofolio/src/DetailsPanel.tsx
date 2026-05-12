@@ -25,7 +25,7 @@ function Experiences() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      className="min-h-[45%] border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 shadow-sm rounded-3xl"
+      className="min-h-[45%] border-zinc-200 bg-white/100  dark:bg-zinc-900 dark:border-zinc-800 shadow-sm rounded-3xl"
     >
       <Card className="h-[440px] w-full p-6 flex flex-col relative border border-transparent bg-transparent overflow-hidden">
         <div className="z-10 mb-4 shrink-0 flex items-center justify-between">

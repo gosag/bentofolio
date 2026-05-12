@@ -106,7 +106,7 @@ const HireMeForCard = () => {
         rounded-lg px-3 py-1">
       </div>
       {/* Left Section: Hire Me For Tags */}
-      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl  hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900 dark:border dark:border-white/5 ">
+      <Card className="max-w-[60%] h-full py-3 px-6  rounded-3xl shadow-xl  hover:shadow-2xl transition-shadow duration-300 dark:bg-zinc-900 dark:border dark:border-white/5 bg-zinc-100 ">
         <p className="text-md bg-slate-200 w-fit mx-auto text-blue-800 rounded-md px-2 flex items-center gap-1 dark:bg-zinc-800 dark:text-zinc-50">
           <Briefcase size={16} /> Hire me For
         </p>

@@ -38,8 +38,22 @@ const staggerContainer = {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className=" relative overflow-hidden min-h-screen grid grid-cols-1 lg:grid-cols-[8fr_4fr_1fr] gap-3 p-3 dark:bg-black"
+      className=" relative overflow-hidden min-h-screen grid grid-cols-1 lg:grid-cols-[8fr_4fr_1fr] gap-3 p-3 text-slate-900 dark:text-slate-100"
     >
+      {/* Background Color & Grid Pattern */}
+      <div className="fixed inset-0 z-[-1] bg-[#f8fafc] dark:bg-[#09090b]">
+        {/* Light Mode Grid (Black lightly transparent) */}
+        <div 
+          className="absolute inset-0 dark:hidden" 
+          style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm39 39H1V1h38v38z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E")` }}
+        />
+        {/* Dark Mode Grid (White lightly transparent) */}
+        <div 
+          className="absolute inset-0 hidden dark:block" 
+          style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm39 39H1V1h38v38z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E")` }}
+        />
+      </div>
+
       {/* spotlight */}
       <div
         ref={spotlightRef}
