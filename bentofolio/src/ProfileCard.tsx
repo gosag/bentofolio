@@ -225,7 +225,7 @@ function ProjectsCard() {
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
-              MERN-Backend Core
+              MERN-Backend-Core
             </h2>
             <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
                 A robust backend infrastructure built with MongoDB, Express.js, React, and Node.js, providing a solid foundation for scalable web applications. . .            
@@ -234,7 +234,7 @@ function ProjectsCard() {
           
           <div className="flex items-end justify-between z-50 mt-2">
             <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
+              <img src="/Backend-core.png" alt="MERN-Backend-Core Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
             <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
