@@ -110,7 +110,7 @@ function GithubDisplay(){
           transition={{  duration: 0.5 }}
         >
         <div className="w-full z-50 border-zinc-200 border rounded-lg px-4 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-800 to-zinc-950 dark:border dark:border-zinc-800">
-            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">700+ contributions in the last year</p>
+            <p className="text-center font-semibold text-zinc-900 dark:text-zinc-200">900+ contributions in the last year</p>
            <img src="/github.png" alt="Github" className="w-[391px] mb-4 z-50 rounded-md"/>
         </div>
         </motion.div>
@@ -148,10 +148,10 @@ function ProjectsCard() {
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
-              EchoStudy
+              ShipIt
             </h2>
             <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-                AI-powered study system with summarization, quizzes, and spaced repetition . . .            
+                A Real Time collaboration App built with React, Node.js, and Socket.IO, enabling users to work together seamlessly on shared documents and projects. It features live editing, chat functionality, and robust synchronization to ensure a smooth collaborative experience. . .            
             </p>
           </div>
           
@@ -217,7 +217,7 @@ function ProjectsCard() {
           </div>
         </a>
         <a 
-          href="https://echostudy.gosagirma.me" 
+          href="https://github.com/gosag/mern-backend-core.git" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group min-h-fit md:h-fit   relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
@@ -225,10 +225,10 @@ function ProjectsCard() {
         >
           <div className="z-10">
             <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
-              EchoStudy
+              MERN-Backend Core
             </h2>
             <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-                AI-powered study system with summarization, quizzes, and spaced repetition . . .            
+                A robust backend infrastructure built with MongoDB, Express.js, React, and Node.js, providing a solid foundation for scalable web applications. . .            
             </p>
           </div>
           
