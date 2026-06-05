@@ -140,7 +140,7 @@ function ProjectsCard() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2  gap-4 overflow-auto custom-scrollbar pb-2 snap-x snap-mandatory  h-full md:max-h-[170px] ">
         <a 
-          href="https://echostudy.gosagirma.me" 
+          href="https://github.com/gosag/ShipIt.git" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group min-h-fit md:h-fit   relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
@@ -157,12 +157,12 @@ function ProjectsCard() {
           
           <div className="flex items-end justify-between z-50 mt-2">
             <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
+              <img src="/ShipIt.png" alt="ShipIt Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
             </div>
             
             <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
               <ArrowUpRight size={16} strokeWidth={2.5} />
-            </div>
+          </div>
           </div>
         </a>
         <a 
@@ -228,7 +228,7 @@ function ProjectsCard() {
               MERN-Backend-Core
             </h2>
             <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-                A robust backend infrastructure built with MongoDB, Express.js, React, and Node.js, providing a solid foundation for scalable web applications. . .            
+                A robust backend infrastructure built with Express, Node.js and MongoDB, providing a solid foundation for scalable web applications. . .            
             </p>
           </div>
           
