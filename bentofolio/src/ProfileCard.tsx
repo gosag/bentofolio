@@ -116,7 +116,8 @@ function GithubDisplay(){
         </motion.div>
     )
 }
-import { ArrowUpRight } from 'lucide-react'; 
+import ProjectCard from "./components/ProjectCard";
+import { projects } from "./data/projects";
 
 function ProjectsCard() {
   return (
@@ -124,7 +125,7 @@ function ProjectsCard() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }} 
-     className="w-full min-h-[25%] my-3  rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col justify-center p-5 overflow-hidden transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800 ">
+     className="w-full min-h-[25%] my-3 rounded-3xl border border-zinc-200 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.zinc.100),_theme(colors.zinc.200),_theme(colors.blue.100))] backdrop-blur-md shadow-xl flex flex-col justify-center p-5 overflow-visible transition-shadow hover:shadow-sm dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-black dark:border dark:border-zinc-800">
       <div className="flex items-center gap-3 mb-4 shrink-0">
         <span className="bg-zinc-100  text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100  text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-200 dark:border-zinc-800">
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,110 +139,10 @@ function ProjectsCard() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2  gap-4 overflow-auto custom-scrollbar pb-2 snap-x snap-mandatory  h-full md:max-h-[170px] ">
-        <a 
-          href="https://github.com/gosag/ShipIt.git" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group min-h-fit md:h-fit   relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
-          dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
-        >
-          <div className="z-10">
-            <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
-              ShipIt
-            </h2>
-            <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-                A Real Time collaboration App built with React, Node.js, and Socket.IO, enabling users to work together seamlessly on shared documents and projects. It features live editing, chat functionality, and robust synchronization to ensure a smooth collaborative experience. . .            
-            </p>
-          </div>
-          
-          <div className="flex items-end justify-between z-50 mt-2">
-            <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/ShipIt.png" alt="ShipIt Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
-            </div>
-            
-            <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
-              <ArrowUpRight size={16} strokeWidth={2.5} />
-          </div>
-          </div>
-        </a>
-        <a 
-          href="https://echostudy.gosagirma.me" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group min-h-fit md:h-fit   relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
-          dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
-        >
-          <div className="z-10">
-            <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
-              EchoStudy
-            </h2>
-            <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-                AI-powered study system with summarization, quizzes, and spaced repetition . . .            
-            </p>
-          </div>
-          
-          <div className="flex items-end justify-between z-50 mt-2">
-            <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/EchoStudy.png" alt="EchoStudy Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
-            </div>
-            
-            <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
-              <ArrowUpRight size={16} strokeWidth={2.5} />
-            </div>
-          </div>
-        </a>
-        <a 
-          href="https://movies.gosagirma.me" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group min-h-fit relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border  border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden dark:bg-zinc-800 dark:border dark:border-zinc-800"
-        >
-          <div className="z-10">
-            <h2 className="text-sm font-bold text-zinc-900 mb-1 dark:text-zinc-50">
-              Movie App
-            </h2>
-            <p className="text-xs text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200">
-              A responsive cinematic explorer built with React, leveraging the TMDB API ...
-            </p>
-          </div>
-          
-          <div className="flex items-end justify-between z-10 mt-2">
-            <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/movieApp.png" alt="Movie App Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
-            </div>
-            
-            <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ark:bg-zinc-700 dark:text-zinc-200 ">
-              <ArrowUpRight size={16} strokeWidth={2.5} />
-            </div>
-          </div>
-        </a>
-        <a 
-          href="https://github.com/gosag/mern-backend-core.git" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group min-h-fit md:h-fit   relative min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:bg-zinc-100 snap-start overflow-hidden 
-          dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border dark:border-zinc-800"
-        >
-          <div className="z-10">
-            <h2 className="text-sm font-bold text-zinc-900  mb-1 flex items-center gap-2 dark:text-zinc-50">
-              MERN-Backend-Core
-            </h2>
-            <p className="text-sm text-zinc-500  line-clamp-2 leading-relaxed dark:text-zinc-200 ">
-                A robust backend infrastructure built with Express, Node.js and MongoDB, providing a solid foundation for scalable web applications. . .            
-            </p>
-          </div>
-          
-          <div className="flex items-end justify-between z-50 mt-2">
-            <div className="w-16 h-10 sm:w-[160px] sm:h-[100px] md:w-16 md:h-10 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-sm relative">
-              <img src="/Backend-core.png" alt="MERN-Backend-Core Preview" className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 z-50" />
-            </div>
-            
-            <div className="bg-white z-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-full p-2 shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 group-hover:-translate-y-1 ">
-              <ArrowUpRight size={16} strokeWidth={2.5} />
-            </div>
-          </div>
-        </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-x-auto overflow-y-visible custom-scrollbar pb-2 snap-x snap-mandatory h-full md:max-h-[170px]">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
       </div>
     </motion.div>
   );
