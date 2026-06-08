@@ -39,7 +39,7 @@ export const projects: Project[] = [
     shortDescription:
       "A responsive cinematic explorer built with React, leveraging the TMDB API...",
     fullDescription:
-      "A responsive movie discovery app powered by the TMDB API. Browse trending films, search by title or genre, and explore detailed cast, ratings, and trailers — all in a sleek cinematic UI.",
+      "A responsive movie discovery app powered by the TMDB API.  search by title and explore detailed cast, ratings, and trailers  — all in a sleek cinematic UI.",
     stack: ["React", "TMDB API", "Vanila CSS", "JavaScript"],
   },
   {

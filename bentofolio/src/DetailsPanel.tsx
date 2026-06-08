@@ -7,7 +7,7 @@ const experienceData = [
     type: "Full-Stack Development",
     period: "1 Year Experience",
     description: "Architected and deployed highly scalable, type-safe robust applications. Managed full product lifecycle from system design to deployment.",
-    skills: ["React", "Node.js", "TypeScript", "MongoDB", "AI Integration", "Express"]
+    skills: ["React", "Node.js", "TypeScript", "MongoDB", "AI Integration", "Express", "Zod", "Socket.IO"]
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const experienceData = [
     type: "Frontend Development",
     period: "2 Years Experience",
     description: "Designed responsive, high-performance user interfaces and integrated complex logic like AI-powered features with seamless state management.",
-    skills: ["Tailwind CSS", "Framer Motion", "Zod", "React", "State Management"]
+    skills: ["Tailwind CSS", "React", "Zod", "Framer Motion", "State Management"]
   }
 ];
 
