@@ -5,6 +5,7 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import type { Project } from "../data/projects";
 
 const OVERLAY_EXPAND = 64;
+const CLOSE_DELAY = 120;
 
 const overlayVariants: Variants = {
   hidden: { opacity: 0, y: 20, scale: 0.92 },
@@ -48,9 +49,31 @@ type ProjectCardProps = {
   project: Project;
 };
 
+function forwardWheelToScrollParent(e: React.WheelEvent, startEl: HTMLElement | null) {
+  let parent = startEl?.parentElement ?? null;
+  while (parent) {
+    const { overflowY, overflowX } = getComputedStyle(parent);
+    const canScrollY =
+      (overflowY === "auto" || overflowY === "scroll") &&
+      parent.scrollHeight > parent.clientHeight;
+    const canScrollX =
+      (overflowX === "auto" || overflowX === "scroll") &&
+      parent.scrollWidth > parent.clientWidth;
+
+    if (canScrollY || canScrollX) {
+      e.preventDefault();
+      if (canScrollY) parent.scrollTop += e.deltaY;
+      if (canScrollX) parent.scrollLeft += e.deltaX;
+      return;
+    }
+    parent = parent.parentElement;
+  }
+}
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   const [showOverlay, setShowOverlay] = useState(false);
   const cardRef = useRef<HTMLAnchorElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
 
   const updateRect = useCallback(() => {
@@ -59,14 +82,27 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     }
   }, []);
 
+  const cancelClose = useCallback(() => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  }, []);
+
+  const scheduleClose = useCallback(() => {
+    cancelClose();
+    closeTimer.current = setTimeout(() => setShowOverlay(false), CLOSE_DELAY);
+  }, [cancelClose]);
+
   const openOverlay = useCallback(() => {
+    cancelClose();
     updateRect();
     setShowOverlay(true);
-  }, [updateRect]);
+  }, [cancelClose, updateRect]);
 
-  const closeOverlay = useCallback(() => {
-    setShowOverlay(false);
-  }, []);
+  useEffect(() => {
+    return () => cancelClose();
+  }, [cancelClose]);
 
   useEffect(() => {
     if (!showOverlay) return;
@@ -79,25 +115,31 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     };
   }, [showOverlay, updateRect]);
 
+  const overlayHeight = rect ? rect.height + OVERLAY_EXPAND : 0;
+
   const overlay = createPortal(
     <AnimatePresence>
       {showOverlay && rect && (
-        <motion.div
+        <motion.a
           key={`${project.title}-overlay`}
-          role="tooltip"
-          aria-hidden="true"
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
           initial="hidden"
           animate="visible"
           exit="exit"
           variants={overlayVariants}
-          className="fixed z-[100] flex flex-col p-3 rounded-2xl pointer-events-none
+          onMouseEnter={openOverlay}
+          onMouseLeave={scheduleClose}
+          onWheel={(e) => forwardWheelToScrollParent(e, cardRef.current)}
+          className="fixed z-[100] flex flex-col p-3 rounded-2xl cursor-pointer
             bg-white border border-zinc-200 shadow-2xl shadow-zinc-900/15
             dark:bg-zinc-950 dark:border-white/10 dark:shadow-black/60"
           style={{
             left: rect.left,
             width: rect.width,
             top: rect.top - OVERLAY_EXPAND,
-            minHeight: rect.height + OVERLAY_EXPAND,
+            height: overlayHeight,
           }}
         >
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50/80 via-white to-violet-50/50 dark:from-blue-500/15 dark:via-transparent dark:to-violet-500/10 pointer-events-none" />
@@ -105,7 +147,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           <motion.div
             variants={contentVariants}
-            className="relative z-10 flex flex-col flex-1 min-h-0"
+            className="relative z-10 flex flex-col h-full min-h-0"
           >
             <h2 className="text-sm font-bold text-zinc-900 dark:text-white mb-2 shrink-0">
               {project.title}
@@ -129,7 +171,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </div>
             </div>
 
-            <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed flex-1 min-h-0">
+            <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed flex-1 min-h-0 overflow-y-auto custom-scrollbar">
               {project.fullDescription}
             </p>
 
@@ -142,7 +184,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </motion.div>
             </div>
           </motion.div>
-        </motion.div>
+        </motion.a>
       )}
     </AnimatePresence>,
     document.body
@@ -154,7 +196,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         className="relative snap-start"
         style={{ paddingTop: OVERLAY_EXPAND, marginTop: -OVERLAY_EXPAND }}
         onMouseEnter={openOverlay}
-        onMouseLeave={closeOverlay}
+        onMouseLeave={scheduleClose}
       >
         <a
           ref={cardRef}
@@ -162,7 +204,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           target="_blank"
           rel="noopener noreferrer"
           onFocus={openOverlay}
-          onBlur={closeOverlay}
+          onBlur={scheduleClose}
           className="group relative min-h-fit md:h-fit min-w-[240px] md:min-w-[260px] flex-1 flex flex-col justify-between rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-all duration-300 hover:border-blue-500/30 overflow-hidden dark:bg-[radial-gradient(ellipse_at_bottom_left,_theme(colors.zinc.600),_theme(colors.zinc.900),_theme(colors.black))] dark:border-zinc-800 dark:hover:border-blue-500/40"
         >
           <div>
