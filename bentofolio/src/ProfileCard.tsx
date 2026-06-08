@@ -139,7 +139,7 @@ function ProjectsCard() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-x-auto overflow-y-visible custom-scrollbar pb-2 snap-x snap-mandatory h-full md:max-h-[170px]">
+      <div className="projects-scroll grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-x-auto overflow-y-auto custom-scrollbar pb-2 snap-x snap-mandatory h-full md:max-h-[170px]">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}

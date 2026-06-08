@@ -38,7 +38,7 @@ const staggerContainer = {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className=" relative overflow-hidden min-h-screen grid grid-cols-1 lg:grid-cols-[8fr_4fr_1fr] gap-3 p-3 text-slate-900 dark:text-slate-100"
+      className="relative overflow-x-hidden min-h-screen grid grid-cols-1 lg:grid-cols-[8fr_4fr_1fr] gap-3 p-3 text-slate-900 dark:text-slate-100"
     >
       {/* Background Color & Grid Pattern */}
       <div className="fixed inset-0 z-[-1] bg-[#f8fafc] dark:bg-black">
