@@ -1,5 +1,5 @@
 import { Briefcase, Check } from "lucide-react";
-import {Card, CardContent, CardHeader} from "./components/ui/card"
+import {Card, CardContent} from "./components/ui/card"
 import {motion} from "framer-motion"
 const row1 = [
   { name: "React", icon: "/skills/react-svgrepo-com.svg" },
@@ -135,36 +135,71 @@ const HireMeForCard = () => {
         </div>
       </Card>
         <motion.div
-          className="max-w-[36%] h-full space-y-3 flex flex-col justify-evenly items-center "
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+        className="max-w-[36%] h-full flex flex-col justify-evenly items-stretch gap-2 sm:gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        {/* Shipped */}
+        <motion.div
+          className="flex-1 h-[30%]"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 0.4 }}
         >
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition-all duration-300 dark:bg-zinc-800 dark:border-white/5 hover:bg-[radial-gradient(circle_at_top_right,_theme(colors.blue.700),_theme(colors.zinc.100),_theme(colors.zinc.50))] hover:dark:bg-[radial-gradient(circle_at_top_right,_theme(colors.blue.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:ring-1 hover:ring-blue-700/50">
-            <CardHeader className="px-2">
-              <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-3 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🚀Deployed</p>
-            </CardHeader>
-            <CardContent className="pb-4 pt-0 px-4">
-              <h1 className="text-4xl text-center font-bold dark:text-zinc-50">3+</h1>
-            </CardContent>
-          </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition-all duration-300 dark:bg-zinc-800 dark:border-white/5 hover:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.100),_theme(colors.zinc.50))] hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.green.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:ring-1 hover:ring-green-700/50">
-            <CardHeader className="px-2">
-              <p className="bg-slate-200 text-xs w-[100%] rounded-xl px-4 py-0.5 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 😊Projects</p>
-            </CardHeader>
-            <CardContent className="pb-4 pt-0 px-4">
-              <h1 className="text-4xl text-center font-bold dark:text-zinc-50">10+</h1>
-            </CardContent>
-          </Card>
-          <Card className=" rounded-3xl shadow-xl bg-zinc-100 hover:shadow-md hover:scale-[1.02] transition-all duration-300 dark:bg-zinc-800 dark:border-white/5  hover:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.100),_theme(colors.zinc.50))] hover:dark:bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.700),_theme(colors.zinc.800),_theme(colors.zinc.900))] hover:ring-1 hover:ring-orange-700/50">
-            <CardHeader className="px-2">
-              <p className="bg-slate-200 text-xs w-[100%] rounded-xl py-0.5 px-6 text-center font-medium dark:bg-zinc-700 dark:text-zinc-100"> 🕒Years</p>
-            </CardHeader>
-            <CardContent className="pb-4 pt-0 px-4">
-              <h1 className="text-5xl text-center font-bold dark:text-zinc-50">2+</h1>
+          <Card className="group relative h-full rounded-2xl border border-zinc-200/80 bg-white dark:bg-zinc-900 dark:border-white/[0.06] overflow-hidden transition-all duration-300 hover:border-blue-500/40 hover:shadow-lg dark:hover:border-blue-500/20">
+            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.blue.500/10),_transparent_65%)]" />
+            <CardContent className="flex flex-col justify-center h-full px-4  gap-1">
+              <span className="inline-flex items-center gap-1.5 w-fit rounded-full bg-blue-50 dark:bg-blue-500/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-400">
+                <span className="size-1.5 rounded-full bg-blue-500 animate-pulse" />
+                Shipped
+              </span>
+              <p className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-none mt-2">4+</p>
+              <p className="text-xs text-zinc-400 dark:text-zinc-500">projects delivered</p>
             </CardContent>
           </Card>
         </motion.div>
+
+        {/* Projects */}
+        <motion.div
+          className="flex-1 h-[30%]"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6, duration: 0.4 }}
+        >
+          <Card className="group relative h-full rounded-2xl border border-zinc-200/80 bg-white dark:bg-zinc-900 dark:border-white/[0.06] overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg dark:hover:border-emerald-500/20">
+            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.emerald.500/10),_transparent_65%)]" />
+            <CardContent className="flex flex-col justify-center h-full px-4 gap-1">
+              <span className="inline-flex items-center gap-1.5 w-fit rounded-full bg-emerald-50 dark:bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+                <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Projects
+              </span>
+              <p className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-none mt-2">10+</p>
+              <p className="text-xs text-zinc-400 dark:text-zinc-500">projects completed</p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Years */}
+        <motion.div
+          className="flex-1 h-[30%]"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7, duration: 0.4 }}
+        >
+          <Card className="group relative h-full rounded-2xl border border-zinc-200/80 bg-white dark:bg-zinc-900 dark:border-white/[0.06] overflow-hidden transition-all duration-300 hover:border-orange-500/40 hover:shadow-lg dark:hover:border-orange-500/20">
+            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_top_right,_theme(colors.orange.500/10),_transparent_65%)]" />
+            <CardContent className="flex flex-col justify-center h-full px-4  gap-1">
+              <span className="inline-flex items-center gap-1.5 w-fit rounded-full bg-orange-50 dark:bg-orange-500/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-orange-700 dark:text-orange-400">
+                <span className="size-1.5 rounded-full bg-orange-500 animate-pulse" />
+                Experience
+              </span>
+              <p className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-none mt-2">2+</p>
+              <p className="text-xs text-zinc-400 dark:text-zinc-500">years of experience</p>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 };
