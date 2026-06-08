@@ -1,9 +1,48 @@
 import { ArrowUpRight } from "lucide-react";
 import { useState, useRef, useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import type { Project } from "../data/projects";
 
 const OVERLAY_EXPAND = 64;
+
+const overlayVariants: Variants = {
+  hidden: { opacity: 0, y: 20, scale: 0.92 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 420, damping: 30, mass: 0.75 },
+  },
+  exit: {
+    opacity: 0,
+    y: 10,
+    scale: 0.96,
+    transition: { duration: 0.18, ease: "easeIn" as const },
+  },
+};
+
+const contentVariants: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.05, duration: 0.25, ease: "easeOut" as const },
+  },
+  exit: { opacity: 0, transition: { duration: 0.1 } },
+};
+
+const arrowVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.4, y: 10, rotate: -45 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    rotate: 0,
+    transition: { delay: 0.12, type: "spring", stiffness: 500, damping: 22 },
+  },
+  exit: { opacity: 0, scale: 0.6, transition: { duration: 0.1 } },
+};
 
 type ProjectCardProps = {
   project: Project;
@@ -40,33 +79,39 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     };
   }, [showOverlay, updateRect]);
 
-  const overlay =
-    showOverlay && rect
-      ? createPortal(
-          <div
-            role="tooltip"
-            aria-hidden="true"
-            className="fixed z-[100] flex flex-col p-3 rounded-2xl pointer-events-none transition-opacity duration-200
-              bg-white border border-zinc-200 shadow-2xl shadow-zinc-900/15
-              dark:bg-zinc-950 dark:border-white/10 dark:shadow-black/60"
-            style={{
-              left: rect.left,
-              width: rect.width,
-              top: rect.top - OVERLAY_EXPAND,
-              minHeight: rect.height + OVERLAY_EXPAND,
-            }}
+  const overlay = createPortal(
+    <AnimatePresence>
+      {showOverlay && rect && (
+        <motion.div
+          key={`${project.title}-overlay`}
+          role="tooltip"
+          aria-hidden="true"
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={overlayVariants}
+          className="fixed z-[100] flex flex-col p-3 rounded-2xl pointer-events-none
+            bg-white border border-zinc-200 shadow-2xl shadow-zinc-900/15
+            dark:bg-zinc-950 dark:border-white/10 dark:shadow-black/60"
+          style={{
+            left: rect.left,
+            width: rect.width,
+            top: rect.top - OVERLAY_EXPAND,
+            minHeight: rect.height + OVERLAY_EXPAND,
+          }}
+        >
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50/80 via-white to-violet-50/50 dark:from-blue-500/15 dark:via-transparent dark:to-violet-500/10 pointer-events-none" />
+          <div className="absolute -top-8 -right-8 w-28 h-28 bg-blue-200/40 dark:bg-blue-500/25 rounded-full blur-2xl pointer-events-none" />
+
+          <motion.div
+            variants={contentVariants}
+            className="relative z-10 flex flex-col flex-1 min-h-0"
           >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50/80 via-white to-violet-50/50 dark:from-blue-500/15 dark:via-transparent dark:to-violet-500/10 pointer-events-none" />
-            <div className="absolute -top-8 -right-8 w-28 h-28 bg-blue-200/40 dark:bg-blue-500/25 rounded-full blur-2xl pointer-events-none" />
+            <h2 className="text-sm font-bold text-zinc-900 dark:text-white mb-2 shrink-0">
+              {project.title}
+            </h2>
 
-            <div className="relative z-10 flex items-center justify-between mb-2 shrink-0">
-              <h2 className="text-sm font-bold text-zinc-900 dark:text-white">{project.title}</h2>
-              <div className="bg-blue-600 text-white rounded-full p-1.5 shadow-lg shadow-blue-600/30 dark:bg-blue-500 dark:shadow-blue-500/30">
-                <ArrowUpRight size={14} strokeWidth={2.5} />
-              </div>
-            </div>
-
-            <div className="relative z-10 shrink-0 mb-2">
+            <div className="shrink-0 mb-2">
               <p className="text-[10px] font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-400 mb-1.5">
                 Tech Stack
               </p>
@@ -84,15 +129,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </div>
             </div>
 
-            <div className="relative z-10 flex-1 min-h-0">
-              <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                {project.fullDescription}
-              </p>
+            <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed flex-1 min-h-0">
+              {project.fullDescription}
+            </p>
+
+            <div className="flex items-end justify-end mt-2 pt-1 shrink-0">
+              <motion.div
+                variants={arrowVariants}
+                className="bg-blue-600 text-white rounded-full p-2 shadow-lg shadow-blue-600/30 dark:bg-blue-500 dark:shadow-blue-500/30"
+              >
+                <ArrowUpRight size={16} strokeWidth={2.5} />
+              </motion.div>
             </div>
-          </div>,
-          document.body
-        )
-      : null;
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>,
+    document.body
+  );
 
   return (
     <>
