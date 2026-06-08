@@ -41,7 +41,6 @@ function SocialBar() {
     if (typeof window !== "undefined") {
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme === "dark" || savedTheme === "light") return savedTheme;
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
     }
     return "light";
   });
