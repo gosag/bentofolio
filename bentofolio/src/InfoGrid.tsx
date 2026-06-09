@@ -195,7 +195,7 @@ const HireMeForCard = () => {
                 Experience
               </span>
               <p className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-none mt-2">2+</p>
-              <p className="text-xs text-zinc-400 dark:text-zinc-500">years of experience</p>
+              <p className="text-xs text-zinc-400 dark:text-zinc-500">years of building</p>
             </CardContent>
           </Card>
         </motion.div>

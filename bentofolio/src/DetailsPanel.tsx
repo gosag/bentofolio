@@ -77,7 +77,7 @@ function Experiences() {
                       {exp.role}
                     </h3>
                     <span className="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 bg-white dark:bg-zinc-900/50 px-2 py-0.5 rounded-full border border-zinc-200 dark:border-zinc-800 whitespace-nowrap shadow-sm">
-                      {exp.period}
+                      
                     </span>
                   </div>
                   <p className="text-xs font-semibold text-blue-600 dark:text-blue-400">
