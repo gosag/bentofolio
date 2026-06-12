@@ -11,7 +11,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "ShipIt",
-    href: "https://github.com/gosag/ShipIt.git",
+    href: "https://shipit.gosagirma.me",
     image: "/ShipIt.png",
     imageAlt: "ShipIt Preview",
     shortDescription:
@@ -32,10 +32,10 @@ export const projects: Project[] = [
     stack: ["React", "Node.js", "Express", "TypeScript", "Gemini", "MongoDB", "Tailwind"],
   },
   {
-    title: "Movie App",
-    href: "https://movies.gosagirma.me",
-    image: "/movieApp.png",
-    imageAlt: "Movie App Preview",
+    title: "WatchVault",
+    href: "https://watchvault.gosagirma.me",
+    image: "/WatchVault.png",
+    imageAlt: "WatchVault Preview",
     shortDescription:
       "A responsive cinematic explorer built with React, leveraging the TMDB API...",
     fullDescription:
