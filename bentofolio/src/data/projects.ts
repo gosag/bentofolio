@@ -18,7 +18,7 @@ export const projects: Project[] = [
       "A Real Time collaboration App built with React, Node.js, and Socket.IO, enabling users to work together seamlessly...",
     fullDescription:
       "A real-time collaboration app enabling users to work together on shared documents and projects. Features live editing, in-app chat, and robust synchronization for a smooth collaborative experience.",
-    stack: ["React", "Node.js", "Socket.IO", "TypeScript", "Express", "MongoDB"],
+    stack: ["React", "Node.js", "Socket.IO", "TypeScript", "Express"],
   },
   {
     title: "EchoStudy",
