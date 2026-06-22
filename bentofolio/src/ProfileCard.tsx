@@ -41,7 +41,7 @@ const IdentityCard = () => {
               <div className="relative z-50">
                 <div className="absolute inset-0 bg-blue-500 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                 <img
-                  src="/profile.jpg"
+                  src="/profile.png"
                   alt="Profile"
                   className="relative rounded-full w-20 h-20 object-cover border-4 border-white/60 dark:border-zinc-800/60 shadow-lg group-hover:scale-[1.03] transition-transform duration-500 z-50 dark:z-40"
                 />
