@@ -36,7 +36,7 @@ function Experiences() {
             </div>
             
           </div>
-          <a href="/Gosa_Girma's_CV.pdf" download className="relative z-50">
+          <a href="/Gosa_Girma's-CV.pdf" download className="relative z-50">
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
